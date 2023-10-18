@@ -1,0 +1,493 @@
+#shoppingCart2 {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.cartstep2 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 800px;
+    margin: 7vh 0 50vh 0;
+    border: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.cartstep2-flow {
+    width: 50%;
+    margin: 0 auto;
+}
+.info-tittle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 4vh;
+    border: 2px solid #ededed;
+}
+.info-tittle span {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.recipient-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    border-right: 2px solid #ededed;
+    border-bottom: 2px solid #ededed;
+    border-left: 2px solid #ededed;
+}
+.recipient-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+}
+.recipient-info-text p {
+    align-self: flex-start;
+    margin: 0;
+}
+.recipient-info button {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    cursor: pointer;
+    color: #3493fb;
+    background-color: #ffffff;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+.recipient-info button:hover {
+    color: #ffffff;
+    background-color: #3493fb;
+}
+.cartstep2-transitions {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background-color: #F4F7FE;
+    border: 2px solid #F4F7FE;
+}
+.info-tittle.B {
+    margin: 0;
+}
+.free-shipping {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-right: 2px solid #ededed;
+    border-bottom: 2px solid #ededed;
+    border-left: 2px solid #ededed;
+}
+.free-shipping span {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.free-shipping select {
+    font-family: "Noto Sans TC", sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.receipt-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    border-right: 2px solid #ededed;
+    border-bottom: 2px solid #ededed;
+    border-left: 2px solid #ededed;
+}
+.receipt-class-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #ededed;
+}
+.receipt-class-btn button {
+    width: 100px;
+    height: 36px;
+}
+.receipt-A,
+.receipt-B,
+.receipt-D {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    color: #656565;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin: 0 15px;
+}
+.receipt-C {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    margin: 0 15px;
+}
+.receipt-A:hover,
+.receipt-B:hover,
+.receipt-D:hover {
+    color: #003060;
+    border: 2px solid #3493fb;
+}
+.receipt-class-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    height: 70px;
+}
+.receipt-class-choice p {
+    margin-left: 60px;
+    margin-right: 20px;
+}
+.receipt-class-choice input {
+    width: 100px;
+    height: 28px;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.receipt-class-choice.A,
+.receipt-class-choice.B,
+.receipt-class-choice.D {
+    display: none;
+}
+.cartstep2-list-outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    background-color: #F4F7FE;
+    border: 2px solid #F4F7FE;
+}
+.cart-list-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #ededed;
+}
+.cart-list-up-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50%;
+}
+.cart-list-up-a-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px;
+    margin-left: 25px;
+    margin-right: 15px;
+}
+.cart-list-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+}
+.cart-list-sum {
+    font-size: 18px;
+    color: #3493fb;
+}
+.cartstep2-btn-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+.cartstep2-btn-outer button {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 85px;
+    height: 36px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 20px;
+    border: 2px solid #3493fb;
+}
+.cartstep2-btn-A {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.cartstep2-btn-A:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.cartstep2-btn-B {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.cartstep2-btn-B:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.popwhite2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 550px;
+    background-color: #F4F7FE;
+    z-index: 5;
+    border-radius: 5px;
+}
+.pop2cross {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+.pop2cross button {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin-right: 20px;
+    padding: 3px;
+}
+.pop2cross button:hover {
+    border: 2px solid #3493fb;
+}
+.pop2cross button img:hover {
+    content: url("../images/icon/cross_blue.svg");
+}
+.manymart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 80%;
+    height: 360px;
+    overflow: auto;
+    border: 2px solid #ededed;
+    background-color: #F4F7FE;
+}
+.marttitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    padding: 15px 0;
+    border-bottom: 2px solid #ededed;
+    border-top: 2px solid #ededed;
+    background-color: #ffffff;
+}
+.marttitle span {
+    margin-left: 10px;
+}
+.whatmart {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3493fb;
+}
+.seveneleven {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #ededed;
+}
+.choicebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    padding: 15px 0;
+    border-right: 2px solid #ededed;
+    background-color: #ffffff;
+}
+.seveneleven_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    padding: 15px 0;
+    background-color: #ffffff;
+}
+.seveneleven_detail span {
+    margin-left: 10px;
+}
+.gray-transition {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #F4F7FE;
+}
+.choicebox input[type="radio"] {
+    /* 隱藏原始按鈕 */
+    display: none;
+}
+
+/* 自定義選擇按鈕的樣式 */
+.choicebox input[type="radio"] + label {
+    /* 添加按鈕的外觀 */
+    display: inline-block;
+    border: 1px solid #656565;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/* 當按鈕被選中時的樣式 */
+.choicebox input[type="radio"]:checked + label {
+    /* 改變按鈕的外觀 */
+    background-color: #3493fb;
+}
+
+.manymartBtn1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 80%;
+    height: 80px;
+    background-color: #ffffff;
+}
+.manymartBtn1 button {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 150px;
+    height: 36px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 20px;
+    border: 2px solid #3493fb;
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.manymartBtn1 button:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.manymartBtn2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 80%;
+    height: 80px;
+}
+.manymartBtn2 button {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 20px;
+    border: 2px solid #3493fb;
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.manymartBtn2 button:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.popwhite2 {
+    display: none;
+}
+.recipient-info.y,
+.recipient-info.z {
+    display: none;
+}
+
+/* 以下為 RWD：cartstep2 */
+
+@media (max-width: 800px) {
+    .cartstep2 {
+        width: 600px;
+    }
+    .cartstep2-flow {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cartstep2 {
+        width: 360px;
+    }
+    .cartstep2-flow {
+        width: 80%;
+    }
+    .free-shipping span,
+    .info-tittle span,
+    .recipient-info-text {
+        margin-left: 10px;
+    }
+    .recipient-info-text p {
+        font-size: 14px;
+    }
+    .receipt-class-choice {
+        width: 100%;
+    }
+    .receipt-class-choice.C p {
+        margin: 15px 20px 15px 10px;
+    }
+    .receipt-class-btn button {
+        width: 80px;
+        height: 36px;
+    }
+    .popwhite2 {
+        width: 360px;
+    }
+    .seveneleven_detail {
+        font-size: 14px;
+    }
+    .receipt-A,
+    .receipt-B,
+    .receipt-C,
+    .receipt-D {
+        margin: 0 5px;
+    }
+}

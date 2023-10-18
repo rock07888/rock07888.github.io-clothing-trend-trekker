@@ -1,0 +1,329 @@
+/* sec2區 */
+.sec2-list-box {
+    display: flex;
+    width: 50%;
+    z-index: 2;
+}
+
+.sec2-item {
+    position: relative;
+    flex: 1;
+    padding: 30px;
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(50, 50, 50, 0.6) 50%,
+        rgba(180, 180, 180, 0.6) 100%
+    );
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    transition: 1.5s;
+}
+.sec2-item.A {
+    margin-right: 30px;
+}
+.sec2-item.B {
+    margin-left: 30px;
+}
+
+#sec2 .sec2-item {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    transform-origin: bottom;
+    transition: 1.5s;
+}
+
+#sec2 .sec2role {
+    position: absolute;
+    top: -4vh;
+    left: 18%;
+    width: 65%;
+    transition: 1.5s;
+}
+
+#sec2 .date {
+    font-size: 1.2rem;
+    margin-top: 1.5vh;
+}
+
+#sec2 .date {
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+}
+
+#sec2 .sec2title2 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    color: #dddddd;
+}
+#sec2 .sec2content {
+    font-family: "Noto Sans TC", sans-serif;
+    position: absolute;
+    font-size: 15px;
+    color: #dddddd;
+    left: 30px;
+    bottom: 6rem;
+    opacity: 0;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;
+    /* 多行省略 */
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: 1.5s;
+}
+
+#sec2 .sec2-item:hover {
+    padding-bottom: 4rem;
+}
+
+#sec2 .sec2-item:hover .sec2scenes {
+    transform: perspective(1000px) rotateX(20deg) skewX(-5deg);
+    /* 透視 旋轉 傾斜 */
+}
+
+#sec2 .sec2-item:hover .sec2role {
+    transform: scale(1.3);
+    /* 縮放 */
+}
+
+#sec2 .sec2-item:hover .sec2content {
+    transform: translateY(4.5rem);
+    opacity: 1;
+}
+@media (max-width: 1700px) {
+    .sec2-list-box {
+        width: 60%;
+    }
+}
+@media (max-width: 1600px) {
+    .sec2-list-box {
+        width: 65%;
+    }
+    #sec2 .sec2-item:hover .sec2content {
+        transform: translateY(4.8rem);
+    }
+}
+@media (max-width: 1400px) {
+    .sec2-list-box {
+        width: 70%;
+    }
+}
+@media (max-width: 1300px) {
+    .sec2-list-box {
+        width: 75%;
+    }
+}
+@media (max-width: 1200px) {
+    .sec2-list-box {
+        width: 80%;
+    }
+}
+@media (max-width: 1100px) {
+    .sec2-list-box {
+        width: 85%;
+    }
+}
+@media (max-width: 1000px) {
+    .sec2-item {
+        padding: 25px;
+    }
+    .sec2-item.A {
+        margin-right: 25px;
+    }
+    .sec2-item.B {
+        margin-left: 25px;
+    }
+    #sec2 .sec2content {
+        left: 25px;
+    }
+    #sec2 .sec2title2 {
+        font-size: 17px;
+    }
+    #sec2 .sec2content {
+        font-size: 14px;
+    }
+}
+@media (max-width: 900px) {
+    .sec2-list-box {
+        width: 90%;
+    }
+    .sec2-item {
+        padding: 15px;
+    }
+    .sec2-item.A {
+        margin-right: 15px;
+    }
+    .sec2-item.B {
+        margin-left: 15px;
+    }
+    #sec2 .sec2content {
+        left: 15px;
+    }
+}
+@media (max-width: 800px) {
+    .sec2-list-box {
+        width: 95%;
+    }
+    .sec2-item {
+        padding: 10px;
+    }
+    .sec2-item.A {
+        margin-right: 10px;
+    }
+    .sec2-item.B {
+        margin-left: 10px;
+    }
+    #sec2 .sec2content {
+        left: 10px;
+    }
+    #sec2 .sec2title2 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 730px) {
+    .sec2-list-box {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .sec2-item.A {
+        margin-right: 0;
+        margin-bottom: 9vh;
+    }
+    .sec2-item.B {
+        margin-left: 0;
+    }
+}
+@media (max-width: 684px) {
+    .sec2-list-box {
+        width: 55%;
+    }
+    .sec2-item.A {
+        margin-bottom: 7vh;
+    }
+}
+@media (max-width: 630px) {
+    .sec2-list-box {
+        width: 60%;
+    }
+    .sec2-item.A {
+        margin-bottom: 5vh;
+    }
+}
+@media (max-width: 570px) {
+    .sec2-list-box {
+        width: 65%;
+    }
+    .sec2-item.A {
+        margin-bottom: 3vh;
+    }
+}
+@media (max-width: 524px) {
+    .sec2-list-box {
+        width: 70%;
+    }
+}
+@media (max-width: 484px) {
+    .sec2-list-box {
+        width: 75%;
+    }
+}
+@media (max-width: 450px) {
+    .sec2-list-box {
+        width: 80%;
+    }
+}
+@media (max-width: 430px) {
+    .sec2-list-box {
+        width: 90%;
+    }
+}
+@media (max-width: 380px) {
+    .sec2-list-box {
+        width: 95%;
+    }
+}
+@media (max-width: 360px) {
+    .sec2-list-box {
+        width: 340px;
+    }
+}
+@media (max-height: 741px) {
+    #sec2 {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #sec2 .sec2-list-box {
+        white-space: nowrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #sec2 .sec2-item {
+        width: 350px;
+        white-space: nowrap;
+    }
+}
+@media (max-height: 741px) and (max-width: 730px) {
+    #sec2 .sec2-list-box {
+        margin-left: 80vw;
+        margin-right: 30vw;
+        width: 2000px;
+    }
+    #sec2 .sec2-item {
+        width: 350px;
+        white-space: nowrap;
+    }
+    #sec2 .sec2-item.A {
+        margin-right: 5vw;
+        margin-bottom: 5vh;
+    }
+    #sec2 .sec2-item.B {
+        margin-bottom: 5vh;
+    }
+}
+@media (max-height: 741px) and (max-width: 500px) {
+    #sec2 .sec2-list-box {
+        margin-left: 150vw;
+        margin-right: 30vw;
+        width: 2000px;
+    }
+    #sec2 .sec2-item {
+        width: 350px;
+        white-space: nowrap;
+    }
+    #sec2 .sec2-item.A {
+        margin-right: 5vw;
+        margin-bottom: 5vh;
+    }
+    #sec2 .sec2-item.B {
+        margin-bottom: 5vh;
+    }
+}
+@media (max-height: 741px) and (max-width: 400px) {
+    #sec2 .sec2-list-box {
+        justify-content: flex-end;
+        margin-left: 200vw;
+        margin-right: 30vw;
+        width: 2000px;
+    }
+    #sec2 .sec2-item {
+        width: 350px;
+        white-space: nowrap;
+    }
+    #sec2 .sec2-item.A {
+        margin-right: 5vw;
+        margin-bottom: 5vh;
+    }
+    #sec2 .sec2-item.B {
+        margin-bottom: 5vh;
+    }
+}

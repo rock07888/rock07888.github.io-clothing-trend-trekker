@@ -1,0 +1,325 @@
+/* ---------- 選擇按鍵 ---------- */
+#memberCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.mem {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-bottom: 40vh;
+}
+#memberBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 50px;
+}
+.my {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 17px;
+    height: 70px;
+    width: 200px;
+    color: #656565;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #ededed;
+}
+.my.Info:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Dis {
+    color: #000000;
+    border-bottom: 3px solid #656565;
+}
+.my.Ord:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Fav:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+@media (max-width: 800px) {
+    .my {
+        font-size: 16px;
+        height: 52.5px;
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .my {
+        font-size: 14px;
+        height: 40px;
+        width: 90px;
+    }
+}
+/* ---------- 專屬優惠 ---------- */
+#infoBox {
+    display: flex;
+    justify-content: center;
+}
+.infoInner {
+    display: block;
+}
+.inputTickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.inputTickets_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 100px;
+    background-color: #F4F7FE;
+}
+.inputTickets_inner input::placeholder {
+    text-align: center;
+    vertical-align: middle;
+}
+.ticketsTitle {
+    margin-right: 20px;
+    font-size: 14px;
+}
+#ticketInput {
+    width: 150px;
+    height: 30px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.ticketsBtn {
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.ticketsBtn input {
+    cursor: pointer;
+    width: 80px;
+    height: 36px;
+    background-color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 1em;
+}
+.ticketsBtn input:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.ticketheadline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 40px;
+    margin-top: 70px;
+}
+.discount {
+    display: flex;
+    width: 45%;
+    height: 40px;
+    background-color: #ffffff;
+    justify-content: center;
+    color: #003060;
+    font-size: 17px;
+    border-bottom: 2px solid #ededed;
+}
+.free-shipping {
+    display: flex;
+    width: 45%;
+    height: 40px;
+    background-color: #ffffff;
+    justify-content: center;
+    color: #003060;
+    font-size: 17px;
+    border-bottom: 2px solid #ededed;
+}
+.two-ticket-column {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20vh;
+}
+.discount-column {
+    display: block;
+    width: 45%;
+}
+.free-shipping-column {
+    display: block;
+    width: 45%;
+}
+.discount-column_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.discount-column_inner img {
+    width: 90%;
+    height: 100px;
+}
+.free-shipping-column_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.free-shipping-column_inner img {
+    width: 90%;
+    height: 100px;
+}
+#coupon10,
+#coupon999 {
+    display: none;
+}
+
+/* 送出評論後，跳出優惠碼 */
+#gotocommentBlack999,
+#gotocommentBlack10 {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    z-index: 199;
+}
+#getcoupon999,
+#getcoupon10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 194px;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+.getcouponcross {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 44px;
+    background-color: #F4F7FE;
+    border-radius: 5px 5px 0 0;
+}
+.getcouponcross button {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+    padding: 3px;
+}
+.getcouponcross button:hover {
+    border: 2px solid #3493fb;
+}
+.getcouponcross button:hover img {
+    content: url("../images/icon/cross_blue.svg");
+}
+.cou999,
+.cou10 {
+    display: block;
+    width: 350px;
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+}
+.cou999 img,
+.cou10 img {
+    border-radius: 0 0 5px 5px;
+}
+#gotocommentBlack999,
+#gotocommentBlack10 {
+    display: none;
+}
+
+/* ---------- RWD：memberB ---------- */
+@media (max-width: 800px) {
+    .headLine {
+        font-size: 16px;
+        height: 30px;
+        width: 600px;
+    }
+    .mycollect {
+        width: 600px;
+    }
+    .inputTickets {
+        margin-top: 60px;
+    }
+    .inputTickets_inner {
+        width: 600px;
+        height: 80px;
+    }
+    .ticketheadline {
+        width: 600px;
+        height: 35px;
+        margin-top: 60px;
+    }
+    .two-ticket-column {
+        width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    .body {
+        font-size: 14px;
+    }
+    .headLine {
+        font-size: 14px;
+        height: 25px;
+        width: 360px;
+        margin: 0;
+        margin-top: 60px;
+    }
+    .mycollect {
+        width: 360px;
+    }
+    .inputTickets {
+        margin-top: 50px;
+    }
+    .inputTickets_inner {
+        width: 360px;
+        height: 70px;
+    }
+    #ticketInput {
+        width: 100px;
+    }
+    .ticketheadline {
+        width: 360px;
+        margin-top: 50px;
+    }
+    .two-ticket-column {
+        width: 360px;
+    }
+    .discount {
+        font-size: 14px;
+    }
+    .free-shipping {
+        font-size: 14px;
+    }
+    .discount-column_inner img {
+        height: 54px;
+    }
+    .free-shipping-column_inner img {
+        height: 54px;
+    }
+}

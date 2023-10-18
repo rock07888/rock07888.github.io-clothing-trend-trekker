@@ -1,0 +1,55 @@
+/* 服務條款 */
+
+#service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.service_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.service_content_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20vh;
+}
+
+.content {
+    display: flex;
+    width: 1000px;
+    letter-spacing: 0.1rem;
+    line-height: 4vh;
+}
+
+/* rwd */
+@media (max-width: 1200px) {
+    .content {
+        width: 800px;
+    }
+}
+@media (max-width: 1000px) {
+    .content {
+        width: 600px;
+    }
+}
+@media (max-width: 800px) {
+    .content {
+        width: 400px;
+    }
+}
+@media (max-width: 600px) {
+    .content {
+        width: 300px;
+    }
+}

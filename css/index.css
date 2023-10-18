@@ -1,0 +1,582 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+/* ---------- indexSection1：首頁輪播圖 ---------- */
+#indexSection1 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    margin-top: 6vh;
+}
+.carousel-item.A {
+    cursor: pointer;
+}
+.indexCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner {
+    display: block;
+    width: 1110px;
+    height: 555px;
+}
+.img_cycle {
+    width: 1110px;
+    height: 555px;
+    overflow: hidden;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    width: 4%;
+}
+.carousel-control-next-icon {
+    content: url("../images/icon/right_gray.svg");
+    background-color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+}
+.carousel-control-prev-icon {
+    content: url("../images/icon/left_gray.svg");
+    background-color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+}
+.carousel-control-next-icon:hover {
+    content: url("../images/icon/right_blue.svg");
+}
+.carousel-control-prev-icon:hover {
+    content: url("../images/icon/left_blue.svg");
+}
+.carousel-indicators button.carousel-dot {
+    margin: 0 10px;
+    width: 8px;
+    height: 8px;
+    border: 4px;
+    border-radius: 4px;
+}
+.carousel-indicators button.active {
+    margin: 0 10px;
+    width: 8px;
+    height: 8px;
+    border: 4px;
+    border-radius: 4px;
+}
+@media (max-width: 1200px) {
+    #indexSection1 {
+        height: 40vw;
+    }
+    .carousel-inner {
+        width: 80vw;
+        height: 40vw;
+    }
+    .img_cycle {
+        width: 80vw;
+        height: 40vw;
+    }
+    .carousel-control-next-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+    .carousel-control-prev-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 5%;
+    }
+}
+@media (max-width: 940px) {
+    .carousel-indicators button.carousel-dot {
+        margin: 0 6px;
+        width: 6px;
+        height: 6px;
+        border: 3px;
+        border-radius: 3px;
+    }
+    .carousel-indicators button.active {
+        margin: 0 6px;
+        width: 6px;
+        height: 6px;
+        border: 3px;
+        border-radius: 3px;
+    }
+}
+@media (max-width: 600px) {
+    .gotopop {
+        width: 100vw !important;
+        justify-content: space-around !important;
+    }
+    #indexSection1 {
+        margin: 0;
+        margin-top: 5vh;
+        width: 100vw;
+        height: 50vw;
+    }
+    .img_cycle {
+        width: 100vw;
+        height: 50vw;
+    }
+    .carousel-inner {
+        width: 100vw;
+        height: 50vw;
+    }
+    .carousel-indicators button.carousel-dot {
+        margin: 0 4px;
+        width: 4px;
+        height: 4px;
+        border: 2px;
+        border-radius: 2px;
+    }
+}
+/* ---------- indexSection2： ---------- */
+#indexSection2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+}
+.gotopop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    margin: 9vh 0;
+}
+.popbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+@media (max-width: 1200px) {
+    .gotopop {
+        width: 80vw;
+    }
+}
+@media (max-width: 900px) {
+    .gotopop {
+        margin: 8vh 0;
+    }
+}
+@media (max-width: 800px) {
+    .gotopop {
+        margin: 7vh 0;
+    }
+}
+@media (max-width: 600px) {
+    .gotopop {
+        margin: 6vh 0;
+    }
+}
+@media (max-width: 500px) {
+    .gotopop {
+        margin: 5vh 0;
+    }
+}
+/* ---------- indexSection3： ---------- */
+#indexSection3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+}
+.section3Title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+}
+.section3Title p {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+.new-Arrivals,
+.ranking {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.seeMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+    width: 150px;
+    height: 36px;
+    color: #ffffff;
+    background-color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+.seeMore:hover {
+    color: #3493fb;
+    background-color: #ffffff;
+}
+/* 首頁：最新商品、銷售排行 */
+.product-container {
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(4, 1fr); /* 初始佈局，一列有4件商品 */
+    grid-gap: 10px;
+    width: 1100px; /* 商品間的間隔 */
+    margin: 50px 0;
+}
+@keyframes colorChange3 {
+    0% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(200, 200, 219, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(240, 240, 255, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(200, 200, 219, 0.45) 100%
+        );
+    }
+
+    10% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(239, 239, 255, 0.45) 0%,
+            rgba(200, 200, 219, 0.45) 10%,
+            rgba(239, 239, 255, 0.45) 20%,
+            rgba(221, 221, 239, 0.45) 30%,
+            rgba(207, 207, 225, 0.45) 40%,
+            rgba(220, 220, 238, 0.45) 50%,
+            rgba(240, 240, 255, 0.45) 60%,
+            rgba(220, 220, 238, 0.45) 70%,
+            rgba(207, 207, 225, 0.45) 80%,
+            rgba(221, 221, 239, 0.45) 90%,
+            rgba(239, 239, 255, 0.45) 100%
+        );
+    }
+
+    20% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(221, 221, 239, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(200, 200, 219, 0.45) 20%,
+            rgba(239, 239, 255, 0.45) 30%,
+            rgba(221, 221, 239, 0.45) 40%,
+            rgba(207, 207, 225, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(240, 240, 255, 0.45) 70%,
+            rgba(220, 220, 238, 0.45) 80%,
+            rgba(207, 207, 225, 0.45) 90%,
+            rgba(221, 221, 239, 0.45) 100%
+        );
+    }
+
+    30% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(207, 207, 225, 0.45) 0%,
+            rgba(221, 221, 239, 0.45) 10%,
+            rgba(239, 239, 255, 0.45) 20%,
+            rgba(200, 200, 219, 0.45) 30%,
+            rgba(239, 239, 255, 0.45) 40%,
+            rgba(221, 221, 239, 0.45) 50%,
+            rgba(207, 207, 225, 0.45) 60%,
+            rgba(220, 220, 238, 0.45) 70%,
+            rgba(240, 240, 255, 0.45) 80%,
+            rgba(220, 220, 238, 0.45) 90%,
+            rgba(207, 207, 225, 0.45) 100%
+        );
+    }
+
+    40% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(220, 220, 238, 0.45) 0%,
+            rgba(207, 207, 225, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(239, 239, 255, 0.45) 30%,
+            rgba(200, 200, 219, 0.45) 40%,
+            rgba(239, 239, 255, 0.45) 50%,
+            rgba(221, 221, 239, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(220, 220, 238, 0.45) 80%,
+            rgba(240, 240, 255, 0.45) 90%,
+            rgba(220, 220, 238, 0.45) 100%
+        );
+    }
+
+    50% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(240, 240, 255, 0.45) 0%,
+            rgba(220, 220, 238, 0.45) 10%,
+            rgba(207, 207, 225, 0.45) 20%,
+            rgba(221, 221, 239, 0.45) 30%,
+            rgba(239, 239, 255, 0.45) 40%,
+            rgba(200, 200, 219, 0.45) 50%,
+            rgba(239, 239, 255, 0.45) 60%,
+            rgba(221, 221, 239, 0.45) 70%,
+            rgba(207, 207, 225, 0.45) 80%,
+            rgba(220, 220, 238, 0.45) 90%,
+            rgba(240, 240, 255, 0.45) 100%
+        );
+    }
+
+    60% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(220, 220, 238, 0.45) 0%,
+            rgba(240, 240, 255, 0.45) 10%,
+            rgba(220, 220, 238, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(221, 221, 239, 0.45) 40%,
+            rgba(239, 239, 255, 0.45) 50%,
+            rgba(200, 200, 219, 0.45) 60%,
+            rgba(239, 239, 255, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(207, 207, 225, 0.45) 90%,
+            rgba(220, 220, 238, 0.45) 100%
+        );
+    }
+
+    70% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(207, 207, 225, 0.45) 0%,
+            rgba(220, 220, 238, 0.45) 10%,
+            rgba(240, 240, 255, 0.45) 20%,
+            rgba(220, 220, 238, 0.45) 30%,
+            rgba(207, 207, 225, 0.45) 40%,
+            rgba(221, 221, 239, 0.45) 50%,
+            rgba(239, 239, 255, 0.45) 60%,
+            rgba(200, 200, 219, 0.45) 70%,
+            rgba(239, 239, 255, 0.45) 80%,
+            rgba(221, 221, 239, 0.45) 90%,
+            rgba(207, 207, 225, 0.45) 100%
+        );
+    }
+
+    80% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(221, 221, 239, 0.45) 0%,
+            rgba(207, 207, 225, 0.45) 10%,
+            rgba(220, 220, 238, 0.45) 20%,
+            rgba(240, 240, 255, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(207, 207, 225, 0.45) 50%,
+            rgba(221, 221, 239, 0.45) 60%,
+            rgba(239, 239, 255, 0.45) 70%,
+            rgba(200, 200, 219, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(221, 221, 239, 0.45) 100%
+        );
+    }
+
+    90% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(239, 239, 255, 0.45) 0%,
+            rgba(221, 221, 239, 0.45) 10%,
+            rgba(207, 207, 225, 0.45) 20%,
+            rgba(220, 220, 238, 0.45) 30%,
+            rgba(240, 240, 255, 0.45) 40%,
+            rgba(220, 220, 238, 0.45) 50%,
+            rgba(207, 207, 225, 0.45) 60%,
+            rgba(221, 221, 239, 0.45) 70%,
+            rgba(239, 239, 255, 0.45) 80%,
+            rgba(200, 200, 219, 0.45) 90%,
+            rgba(239, 239, 255, 0.45) 100%
+        );
+    }
+
+    100% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(200, 200, 219, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(240, 240, 255, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(200, 200, 219, 0.45) 100%
+        );
+    }
+}
+.gridProduct {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+    animation: colorChange3 8s infinite;
+    transition: background-image 100s ease;
+    /* 商品樣式設定 */
+}
+.gridProductImg,
+.gridProductName,
+.gridProductPrice,
+.gridProductStar,
+.gridProductSales {
+    width: 80%;
+    align-self: center;
+}
+.gridProductImg {
+    margin-top: 20px;
+}
+.gridProductImg img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.gridProductName {
+    font-size: 14px;
+    height: 40px;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gridProductPrice {
+    font-size: 14px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.priceNum {
+    margin: 0 10px;
+    font-size: 16px;
+    font-size: large;
+    color: #3493fb;
+}
+.gridProductStar {
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+.gridProductStar img {
+    width: 130px;
+    height: 24px;
+}
+.gridProductSales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    font-size: 13px;
+    color: #656565;
+}
+@media (max-width: 1200px) {
+    .product-container {
+        width: 1000px;
+    }
+    .gridProductImg img {
+        width: 190px;
+        height: 200px;
+    }
+}
+@media (max-width: 1100px) {
+    .product-container {
+        width: 900px;
+    }
+    .productFilter1 {
+        flex-direction: column;
+        align-items: end;
+    }
+    .gridProductImg img {
+        width: 180px;
+        height: 190px;
+    }
+}
+@media (max-width: 1000px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 800px;
+    }
+    .gridProductImg img {
+        width: 200px;
+        height: 210px;
+    }
+}
+@media (max-width: 900px) {
+    .product-container {
+        width: 700px;
+    }
+    .gridProductImg img {
+        width: 180px;
+        height: 190px;
+    }
+}
+@media (max-width: 800px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 500px;
+    }
+    .gridProductImg img {
+        width: 200px;
+        height: 210px;
+    }
+}
+@media (max-width: 600px) {
+    .product-container {
+        width: 490px;
+    }
+    .gridProductImg img {
+        width: 170px;
+        height: 180px;
+    }
+}
+@media (max-width: 550px) {
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 270px;
+    }
+    .filterNT {
+        display: none;
+    }
+    .gridProductImg img {
+        width: 220px;
+        height: 210px;
+    }
+}
+@media (max-width: 490px) {
+    .product-container {
+        width: 250px;
+    }
+    .gridProductImg {
+        width: 90%;
+    }
+    .gridProductImg img {
+        width: 200px;
+        height: 210px;
+    }
+}
+.gridProduct.t-n-5A {
+    border: 1px solid #3493fb;
+}

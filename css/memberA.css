@@ -1,0 +1,655 @@
+/* ---------- 選擇按鍵 ---------- */
+#memberCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.mem {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-bottom: 40vh;
+}
+#memberBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 50px;
+}
+.my {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 17px;
+    height: 70px;
+    width: 200px;
+    color: #656565;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #ededed;
+}
+.my.Info {
+    color: #000000;
+    border-bottom: 3px solid #656565;
+}
+.my.Dis:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Ord:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Fav:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+@media (max-width: 800px) {
+    .my {
+        font-size: 16px;
+        height: 52.5px;
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .my {
+        font-size: 14px;
+        height: 40px;
+        width: 90px;
+    }
+}
+/* ---------- 個人資訊 ---------- */
+#infoBox {
+    display: flex;
+    justify-content: center;
+}
+.infoInner {
+    display: block;
+}
+.headLine {
+    width: 800px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #003060;
+    margin-top: 70px;
+    font-size: 17px;
+    border-bottom: 2px solid #ededed;
+}
+.myRow,
+.myRowA,
+.myRowB {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+.myTitle {
+    width: 120px;
+    height: 25px;
+    padding-top: 5px;
+}
+.my_title {
+    margin: 0;
+}
+.mySave {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-top: 40px;
+}
+.save_btn {
+    font-family: "Noto Sans TC", sans-serif;
+    justify-content: center;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.save_btn:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+/* ---------- 聯絡方式 ---------- */
+.cityRow {
+    display: flex;
+    align-items: center;
+}
+.cityRow p {
+    margin: 0;
+}
+#username3,
+#birthday,
+#tel,
+#password,
+#password_1 {
+    width: 150px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+#city {
+    width: 120px;
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+#district {
+    width: 98px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+#myAddress,
+#email {
+    width: 200px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+/* ---------- 常用取貨超商 ---------- */
+.myMart {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 40px;
+    height: 70px;
+}
+.mart_btn {
+    font-family: "Noto Sans TC", sans-serif;
+    justify-content: center;
+    font-size: 14px;
+    width: 150px;
+    height: 36px;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.mart_btn:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.pop-up-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 600px;
+    height: 476px;
+    background-color: #F4F7FE;
+    z-index: 5;
+    border-radius: 5px;
+}
+.crossTitle {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F4F7FE;
+    width: 600px;
+    height: 44px;
+    border-radius: 5px;
+}
+.crossClose {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+    padding: 3px;
+}
+.crossClose:hover {
+    border: 2px solid #3493fb;
+}
+.crossClose:hover img {
+    content: url("../images/icon/cross_blue.svg");
+}
+.martTitle {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.mart_title {
+    width: 500px;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ededed;
+    padding-top: 10px;
+}
+.mart_title p {
+    margin: 0;
+}
+.mart_title span {
+    margin: 0;
+    white-space: nowrap;
+}
+.mart_p1 {
+    font-size: 16px;
+}
+.mart_p2 {
+    font-size: 14px;
+    color: #656565;
+}
+.mart_p3 {
+    font-size: 14px;
+    color: #656565;
+}
+.martText {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.mart_Text {
+    width: 500px;
+    height: 100px;
+    background-color: #ffffff;
+    padding-top: 10px;
+    display: block;
+}
+.martInput {
+    display: flex;
+    margin-top: 10px;
+}
+.myTitleP {
+    width: 150px;
+    height: 25px;
+    padding-top: 5px;
+}
+#martusername1,
+#marttel {
+    width: 150px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.martOption {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.mart_Option {
+    width: 500px;
+    height: 180px;
+    background-color: #ffffff;
+    display: block;
+}
+.seven11 {
+    display: flex;
+    margin-bottom: 10px;
+}
+.seven11_btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    color: #656565;
+    border: 0;
+    height: 80px;
+    width: 500px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.seven11_btn:hover {
+    color: #3493fb;
+    border: 2px solid #3493fb;
+}
+.seven11_btn img {
+    width: 50px;
+    height: 50px;
+}
+.myCbtn {
+    display: flex;
+    justify-content: center;
+    background-color: #F4F7FE;
+    border-radius: 3px;
+}
+.my_Cbtn {
+    width: 500px;
+    height: 70px;
+    background-color: #F4F7FE;
+    display: flex;
+    justify-content: flex-end;
+}
+.myReset {
+    text-align: center;
+    margin: 15px 0 0 0;
+    width: 80px;
+    height: 36px;
+}
+.myReset input {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+.myReset input:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.mySubmit {
+    text-align: center;
+    margin: 15px 0 0 15px;
+    width: 80px;
+    height: 36px;
+}
+.mySubmit input {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    background-color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    color: #ffffff;
+}
+.mySubmit input:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+#popmart {
+    display: none;
+}
+.mymart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 120px;
+    background-color: #F4F7FE;
+    margin-bottom: 10px;
+}
+.mymart_text {
+    display: block;
+    width: 300px;
+    height: 100px;
+    margin-left: 15px;
+}
+.mymart_text p {
+    margin: 0;
+    margin-top: 3px;
+}
+.mymart_delete {
+    align-self: flex-start;
+}
+.mymartDelete {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    background-color: #F4F7FE;
+    border: 0;
+    padding: 0;
+    margin: 15px 15px 0 0;
+}
+.mymartDelete:hover img {
+    content: url("../images/icon/garbage_blue.svg");
+}
+.nomart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 240px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.nomartImg {
+    margin-bottom: 20px;
+}
+.nomartImg img {
+    width: 70px;
+    height: 70px;
+}
+.nomart p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #003060;
+}
+.nomart span {
+    color: #656565;
+}
+
+.nomart {
+    display: none;
+}
+/* ---------- 綁定第三方社群帳號 ----------*/
+.myfbggline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 120px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.myfbgglineL {
+    display: flex;
+    align-items: center;
+}
+.myfbgglineImg {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.myfbgglineText {
+    width: 75px;
+    height: 50px;
+    margin-left: 10px;
+}
+.myfbgglineM {
+    display: flex;
+    align-items: center;
+}
+.myfbgglineText.B {
+    color: #656565;
+}
+.myfbgglineM.B {
+    color: #656565;
+}
+.communityOff {
+    cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #3493fb;
+    width: 80px;
+    height: 36px;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin: 0;
+    margin-right: 10px;
+}
+.communityOff:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.communityOn {
+    cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    background-color: #3493fb;
+    color: #ffffff;
+    width: 80px;
+    height: 36px;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin: 0;
+    margin-right: 10px;
+}
+.communityOn:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+#fbOff,
+#ggOn,
+#lineOff {
+    display: none;
+}
+/* ---------- RWD：memberA ---------- */
+@media (max-width: 800px) {
+    .headLine {
+        font-size: 16px;
+        height: 30px;
+        width: 600px;
+    }
+    #myAddress {
+        width: 150px;
+    }
+    .mymart {
+        width: 600px;
+    }
+    .nomart {
+        width: 600px;
+    }
+    .myfbggline {
+        width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    .body {
+        font-size: 14px;
+    }
+    .mymart_text p {
+        font-size: 14px;
+    }
+    .headLine {
+        font-size: 14px;
+        height: 25px;
+        width: 360px;
+        margin: 0;
+        margin-top: 60px;
+    }
+    .cityRow {
+        display: block;
+    }
+    .cityRow p {
+        margin: 0;
+    }
+    .addTitOut {
+        height: 125px;
+        display: block;
+    }
+    .my_Cbtn,
+    .seven11_btn,
+    .mart_Option,
+    .mart_Text,
+    .mart_title {
+        width: 300px;
+    }
+    .pop-up-window,
+    .crossTitle {
+        font-size: 14px;
+        width: 360px;
+    }
+    #martusername,
+    #marttel {
+        width: 150px;
+        border: 0.5px solid #656565;
+        border-radius: 3px;
+    }
+    .mart_p3 {
+        display: none;
+    }
+    .mymart {
+        width: 360px;
+    }
+    .nomart {
+        width: 360px;
+    }
+    .myfbggline {
+        font-size: 14px;
+        width: 360px;
+    }
+    .myfbgglineText.Z {
+        width: 45px;
+    }
+    .myfbgglineImg {
+        width: 40px;
+        height: 40px;
+    }
+}
+/* ----------- 單選按鈕設定 ---------- */
+/* 選擇按鈕的外觀 */
+.myRowA input[type="radio"] {
+    /* 隱藏原始按鈕 */
+    display: none;
+}
+
+/* 自定義選擇按鈕的樣式 */
+.myRowA input[type="radio"] + label {
+    /* 添加按鈕的外觀 */
+    display: inline-block;
+    border: 1px solid #656565;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/* 當按鈕被選中時的樣式 */
+.myRowA input[type="radio"]:checked + label {
+    /* 改變按鈕的外觀 */
+    background-color: #3493fb;
+}
+
+.myRowA span {
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+/* 選擇按鈕的外觀 */
+.myRowB input[type="radio"] {
+    /* 隱藏原始按鈕 */
+    display: none;
+}
+
+/* 自定義選擇按鈕的樣式 */
+.myRowB input[type="radio"] + label {
+    /* 添加按鈕的外觀 */
+    display: inline-block;
+    border: 1px solid #656565;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/* 當按鈕被選中時的樣式 */
+.myRowB input[type="radio"]:checked + label {
+    /* 改變按鈕的外觀 */
+    background-color: #3493fb;
+}
+
+.myRowB span {
+    margin-left: 10px;
+    margin-right: 15px;
+}

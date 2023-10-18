@@ -1,0 +1,223 @@
+/* 模擬 AI 教學：框架 */
+#askai {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+.askai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    border-radius: 10px;
+}
+.aititle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.aianswer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #F4F7FE;
+    border-radius: 10px;
+}
+/* 模擬 AI 教學：內部設定 */
+.trend {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+    width: 100%;
+}
+.trend span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #003060;
+}
+.aioption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.aioption button {
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 0;
+    width: 105px;
+    height: 60px;
+}
+.jpQ,
+.korQ,
+.strQ,
+.tooQ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 60px;
+    background-color: #FBFBFF;
+    border-radius: 5px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+.jpQ img,
+.korQ img,
+.strQ img,
+.tooQ img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+}
+.jpQ span,
+.korQ span,
+.strQ span,
+.tooQ span {
+    font-size: 15px;
+    color: #656565;
+}
+.jpA,
+.korA,
+.strA,
+.tooA {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 15px 0 35px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+.jpAtitle,
+.korAtitle,
+.tooAtitle,
+.strAtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    background-color: #FBFBFF;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+.jpAtitle img,
+.korAtitle img,
+.tooAtitle img,
+.strAtitle img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+}
+.jpAtitle span,
+.korAtitle span,
+.tooAtitle span,
+.strAtitle span {
+    font-size: 15px;
+    color: #656565;
+}
+/* Ai 回答 */
+.A-outer {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 85%;
+    margin-bottom: 20px;
+}
+#jp-container,
+#kor-container,
+#too-container,
+#str-container {
+    font-size: 15px;
+    color: #656565;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    word-break: break-all;
+    line-height: 1.8;
+}
+
+.cursor {
+    display: inline-block;
+    width: 9px;
+    height: 24px;
+    background-color: black;
+    animation: blink 0.1s infinite;
+    position: absolute;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@media (max-width:1200px) {
+    .askai {
+        width: 800px;
+    }
+    .aioption button {
+        width: 98px;
+        height: 56px;
+    }
+}
+@media (max-width:1000px) {
+    .askai {
+        width: 600px;
+    }
+    .aioption button {
+        width: 84px;
+        height: 48px;
+    }
+}
+@media (max-width:800px) {
+    .askai {
+        width: 500px;
+    }
+    .aioption button {
+        width: 77px;
+        height: 44px;
+    }
+}
+@media (max-width:700px) {
+    .askai {
+        width: 400px;
+    }
+}
+@media (max-width:600px) {
+    .askai {
+        width: 360px;
+    }
+    .aioption button {
+        width: 70px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,698 @@
+/* 商品頁區 */
+#product_slide {
+    width: 100%;
+}
+
+.slide_frame {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 10vh;
+}
+
+/* 左側小圖片區 */
+#picture_select {
+    width: 100px;
+    margin-top: 100px;
+}
+
+/* 小圖片本體 */
+
+.productslide_carousel li img {
+    padding: 10px;
+    max-width: 100%;
+    height: 100px;
+    vertical-align: top;
+}
+
+.productslide_carousel li {
+    list-style: none;
+}
+
+/* 點擊滑動圖片按鈕 */
+.button_prev {
+    margin-top: 40px;
+}
+
+.button_prev,
+.button_next {
+    background-color: white;
+    border: none;
+    margin-left: 12px;
+    width: 80px;
+}
+
+.button_prev:hover,
+.button_next:hover {
+    background-color: #ededed;
+}
+
+/* 主要圖片區 */
+.max-width1 {
+    display: flex;
+}
+
+.picture_main {
+    width: 389px;
+    margin-top: 100px;
+    margin-right: 20px;
+    background-color: #ffffff;
+}
+
+/* 主要商品圖區 */
+/* 共用樣式 */
+.nautica1,
+.nautica2,
+.nautica3,
+.nautica4,
+.nautica5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 387px;
+    height: 462px;
+    background-color: #ffffff;
+    background-size: 387px 462px;
+    background-repeat: no-repeat;
+}
+
+/* 以下為各class圖片 */
+.nautica1 {
+    background-image: url(../images/productslide/01.JPG);
+}
+
+.nautica2 {
+    background-image: url(../images/productslide/02.JPG);
+}
+
+.nautica3 {
+    background-image: url(../images/productslide/03.JPG);
+}
+
+.nautica4 {
+    background-image: url(../images/productslide/04.JPG);
+}
+
+.nautica5 {
+    background-image: url(../images/productslide/05.JPG);
+}
+
+.nautica1 img,
+.nautica2 img,
+.nautica3 img,
+.nautica4 img,
+.nautica5 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 共用zoomed樣式 */
+.nautica1[zoomed],
+.nautica2[zoomed],
+.nautica3[zoomed],
+.nautica4[zoomed],
+.nautica5[zoomed] {
+    background-size: 774px 924px;
+    background-position: calc(var(--x) * 100%) calc(var(--y) * 100%);
+}
+
+.nautica2,
+.nautica3,
+.nautica4,
+.nautica5 {
+    display: none;
+}
+
+/* 分享，最愛icon */
+.shareandfavorite {
+    display: flex;
+}
+
+.shareandfavorite div {
+    display: flex;
+}
+
+/* 商品資料區 */
+.productslide_product_detail {
+    width: 400px;
+    /* height: 70vh; */
+    margin-top: 90px;
+}
+
+.productslide_product_detail h2:nth-child(1) {
+    font-size: 17px;
+}
+
+.productslide_product_detail h2:nth-child(2) {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.dollar {
+    color: #12298c;
+    margin-top: 30px;
+}
+
+/* 星等評價 */
+.product_rate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #7a7a7a;
+    height: 25px;
+}
+
+.product_rate img {
+    width: 125px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.product_rate p {
+    margin: 0;
+}
+
+/* 優惠活動 */
+.product_discount {
+    display: flex;
+}
+
+.product_discount p:nth-child(2) {
+    color: #3493fb;
+}
+
+/* 顏色選項區 */
+
+.product_option_color button {
+    margin: 0 3px;
+    border: 2px solid #ededed;
+}
+
+.option_white {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+.option_gray {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #ededed;
+}
+
+.option_black {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+
+.option_yellow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #d7a603;
+}
+
+.option_green {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #03622f;
+}
+
+
+
+/* 商品尺寸按鈕 */
+.product_option_size button {
+    cursor: pointer;
+    margin: 3px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background-color: white;
+    border: 2px solid #ededed;
+    text-align: center;
+}
+
+/* 數量加減區 */
+.product_nautica_quantity {
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+#product_quantity_input::-webkit-inner-spin-button,
+#product_quantity_input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* 加減號按鈕 */
+.product_nautica_btn1,
+.product_nautica_btn2 {
+    background-color: white;
+    border: 2px solid #7a7a7a;
+    height: 35%;
+}
+
+.product_nautica_btn1 {
+    margin-right: -4px;
+
+}
+
+.product_nautica_btn2 {
+    margin-left: -5px;
+
+}
+
+/* 減號按鈕觸碰時 */
+.product_nautica_btn1:hover {
+    border: 2px solid #3493fb;
+    margin-right: -5px;
+}
+
+/* 加號按鈕觸碰時 */
+.product_nautica_btn2:hover {
+    border: 2px solid #3493fb;
+    margin-left: -5px;
+}
+
+/* input樣式更改 */
+#product_quantity_input {
+    text-align: center;
+    width: 260px;
+    height: 23%;
+    border: 2px solid #656565;
+    padding: 1.5px 0 1.5px 0;
+}
+
+/* 直接購買，加入購物車 */
+.buy_addcart {
+    margin-top: 4vh;
+}
+
+/* 直接購買鍵,加入購物車鍵 */
+.buy_addcart button:nth-child(1) {
+    margin-right: 4px;
+
+}
+
+.buy_addcart button:nth-child(1),
+.buy_addcart button:nth-child(2) {
+    width: 158px;
+    height: 5vh;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 2px solid #3493fb;
+    background-color: #3493fb;
+}
+
+/* hover時 */
+.buy_addcart button:nth-child(1):hover,
+.buy_addcart button:nth-child(2):hover {
+    color: #3493fb;
+    background-color: #ffffff;
+}
+
+.cusLine {
+    display: flex;
+    margin: 0 auto;
+    width: 801px;
+    border-top: 1px solid #656565;
+}
+
+.prodcut-introduce-detail {
+    margin-bottom: 0;
+}
+
+.payandshipframe {
+    margin-bottom: 20vh;
+}
+
+@media (max-width: 1032px) {
+    .prodcut-introduce-detail {
+        width: 800px;
+    }
+}
+
+/* rwd */
+@media (max-width: 912px) {
+    .prodcut-introduce-detail {
+        width: 528px;
+    }
+
+    .max-width1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .descbar {
+        width: 500px;
+    }
+
+    .filter_point_time {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .rating_filter {
+        margin-right: 60px;
+    }
+
+    .reviewfilter {
+        margin: 30px 0 0 0;
+        justify-content: space-around;
+    }
+
+    .reviewfilter p {
+        margin-left: -30px;
+    }
+
+    .hwfilterdw {
+        display: flex;
+    }
+
+    .distributed_picture {
+        margin-top: 20px;
+        width: 100px;
+        height: 120px;
+    }
+
+    .bar_chart {
+        width: 200px;
+    }
+
+    .bar_chart_quantity {
+        margin-top: 30px;
+        height: 120px;
+    }
+
+    .customer img {
+        margin-left: 370px;
+    }
+
+    .review-dateA {
+        padding-left: 660px;
+    }
+
+    .review-dateB {
+        padding-left: 640px;
+    }
+
+    .cusLine {
+        width: 717px;
+    }
+}
+
+
+/* 以下商品評論RWD */
+
+@media (max-width: 763px) {
+
+
+    .customer img {
+        margin-left: 300px;
+    }
+
+    .review-dateA {
+        padding-left: 600px;
+    }
+
+    .review-dateB {
+        padding-left: 580px;
+    }
+
+    .cusLine {
+        width: 647px;
+    }
+}
+
+@media (max-width: 677px) {
+    .prodcut-introduce-detail {
+        width: 428px;
+    }
+
+    .customer img {
+        margin-left: 200px;
+    }
+
+    .review-dateA {
+        padding-left: 500px;
+    }
+
+    .review-dateB {
+        padding-left: 480px;
+    }
+
+    .cusLine {
+        width: 547px;
+    }
+}
+
+@media (max-width: 557px) {
+
+
+    .customer img {
+        margin-left: 120px;
+    }
+
+    .review-dateA {
+        padding-left: 420px;
+    }
+
+    .review-dateB {
+        padding-left: 400px;
+    }
+
+    .cusLine {
+        width: 467px;
+    }
+}
+
+@media (max-width: 504px) {
+    .prodcut-introduce-detail {
+        width: 328px;
+    }
+    .review_example {
+        margin: 0 10px;
+    }
+
+    .customer_review {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .customer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .customer img {
+        width: 110px;
+        margin-left: 0;
+    }
+
+    .review-dateA {
+        padding-left: 400px;
+    }
+
+    .review-dateB {
+        padding-left: 380px;
+    }
+
+    .cusLine {
+        width: 480px;
+    }
+}
+
+@media (max-width: 481px) {
+    .customer img {
+        width: 90px;
+    }
+
+    .review-dateA {
+        padding-left: 380px;
+    }
+
+    .review-dateB {
+        padding-left: 360px;
+    }
+
+    .cusLine {
+        width: 453px;
+    }
+}
+
+@media (max-width: 452px) {
+    .customer img {
+        width: 90px;
+    }
+
+    .review-dateA {
+        padding-left: 0;
+    }
+
+    .review-dateB {
+        padding-left: 0;
+    }
+
+    .cusLine {
+        width: 90vw;
+    }
+}
+
+/* 以下為其他區 */
+@media (max-width: 556px) {
+    #picture_select {
+        display: none;
+    }
+
+    .descbar {
+        width: 400px;
+    }
+
+    .shareandfavorite {
+        display: none;
+    }
+
+    .productslide_product_detail {
+        margin-left: 10px;
+        width: 320px;
+        margin-top: -30px;
+    }
+
+    .nautica1,
+    .nautica2,
+    .nautica3,
+    .nautica4,
+    .nautica5 {
+        width: 310px;
+        height: 370px;
+        margin-top: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #product_quantity_input {
+        width: 250px;
+    }
+
+    .buy_addcart button:nth-child(1),
+    .buy_addcart button:nth-child(2) {
+        width: 154px;
+    }
+
+    .review_title {
+        text-align: center;
+    }
+
+    .distributed_div {
+        display: none;
+    }
+
+    .picture_main {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .payandshipframe {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ship {
+        margin-left: 20px;
+        padding-right: 0;
+    }
+
+    .pay {
+        margin-left: 20px;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 468px) {
+    .shareandfavorite {
+        display: none;
+    }
+
+    .buy_addcart {
+        display: flex;
+    }
+
+    .max-width1 {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: end; */
+    }
+
+    .picture_main {
+        width: 300px;
+        margin-bottom: 80px;
+    }
+
+    #picture_select {
+        display: none;
+    }
+
+    .nautica1,
+    .nautica2,
+    .nautica3,
+    .nautica4,
+    .nautica5 {
+        margin-left: 10px;
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .descbar {
+        width: 390px;
+    }
+
+    .payandshipframe {
+        width: 330px;
+    }
+}
+
+@media (max-width: 414px) {
+    .prodcut-introduce-detail {
+        width: 280px;
+    }
+
+    .descbar {
+        width: 330px;
+    }
+}
+
+@media (max-width: 390px) {
+    .productslide_product_detail {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .productslide_product_detail {
+        margin-top: -30px;
+    }
+}
+
+#product_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

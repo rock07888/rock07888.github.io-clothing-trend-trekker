@@ -1,0 +1,707 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+
+/* ---------- 共用區 ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+/* ---------- navbar ---------- */
+/* overlay：黑色背景模糊 */
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 4;
+    display: none;
+}
+
+/* navbar：最外層容器 */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 130px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 1px #e0e0e0;
+    z-index: 6;
+}
+
+/* marquee：跑馬燈輪播公告 */
+.marquee {
+    display: flex;
+    background-color: #3493fb;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee p {
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    opacity: 0;
+    animation: marquee 9s infinite;
+}
+
+.marquee p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.marquee p:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.marquee p:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    5% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    35% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* topbar：導覽連結外層容器 */
+.topbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* logo：回首頁 */
+.logo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.logo-img img {
+    width: 135px;
+    height: 45px;
+    border-radius: 3px;
+}
+
+.logo-img img:hover {
+    content: url("../images/logo/TopbarLogo_blue_hover.svg");
+}
+
+/* topbar-row：功能選單外層容器 */
+.topbar-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* first-row：上層icons外層容器 */
+.first-row {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 900px;
+    height: 45px;
+}
+
+/* icons：超連結icons外層容器 */
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* searchbar：搜尋框、搜尋鍵 */
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+/* 搜尋框 */
+.searchbar input:nth-child(1) {
+    width: 100px;
+    height: 22px;
+    padding: 3px 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+
+.searchbar input::placeholder {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 搜尋鍵 */
+.searchbar input:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 16px;
+}
+
+/* 會員、收藏、購物車 */
+.icon_member,
+.icon_favorate,
+.icon_shop {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 8px;
+}
+.icon_member img,
+.icon_favorate img,
+.icon_shop img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* 漢堡按鈕 */
+#hamburger_outer {
+    background-color: #F4F7FE;
+    width: 60px;
+    height: 60px;
+    margin-left: 16px;
+}
+
+.hamburger {
+    display: inline-block;
+    /* 自動抓內容(.bar)的尺寸 */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px;
+}
+
+.bar {
+    display: block;
+    /* 修改span行內元素為區塊 */
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #656565;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background-color: #3493fb;
+}
+
+.hamburger.is-active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: #3493fb;
+}
+
+#hamburger_outer {
+    display: none;
+}
+
+/* second-row：topbar-menu外層容器 */
+.second-row {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 40px;
+}
+
+/* topbar-menu：menu外層容器 */
+.topbar-menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+/* menu */
+.topbar-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.topbar-menu li {
+    cursor: pointer;
+    font-size: 14px;
+    color: #656565;
+    margin: 0 8px;
+}
+
+.topbar-menu ul li a {
+    color: #656565;
+}
+
+.topbar-menu ul li a:hover {
+    color: #3493fb;
+}
+
+/* ---------- 所有商品 ---------- */
+#allProduct {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 130px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 3px 1px #e0e0e0;
+}
+.allProduct_inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.productChoice {
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.product_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 15px;
+    color: #656565;
+}
+
+.product_btn img {
+    width: 100px;
+    height: 100px;
+}
+
+.product_btn:hover {
+    color: #3493fb;
+}
+
+.product_btn:hover img {
+    height: 110px;
+}
+
+#allProduct {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transform: translateY(-20px);
+}
+
+#mp {
+    display: inline-block;
+}
+
+/* ---------- 品牌分類 ---------- */
+#brandClass {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 130px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 3px 1px #e0e0e0;
+}
+
+.brandClass_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandChoice {
+    margin-top: 25px;
+    height: 100px;
+    margin-right: 30px;
+}
+
+.brand_btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+}
+
+.brand_btn img {
+    width: 180px;
+    height: 100px;
+}
+
+.brand_btn img:hover {
+    height: 110px;
+}
+
+.brand_btn.A:hover img {
+    content: url("../images/brand/PIN_SKTBS_H.svg");
+}
+
+.brand_btn.B:hover img {
+    content: url("../images/brand/BOHRHOO_H.svg");
+}
+
+.brand_btn.C:hover img {
+    content: url("../images/brand/FREAKS_STORE_H.svg");
+}
+
+.brand_btn.D:hover img {
+    content: url("../images/brand/NAUTICA_H.svg");
+}
+
+#brandClass {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transform: translateY(-20px);
+}
+
+#bc {
+    display: inline-block;
+}
+
+/* ---------- hamburger menu ---------- */
+.hamburgerMenu {
+    display: block;
+    width: 200px;
+    height: calc(100vh - 105px);
+    border: 3px solid #ededed;
+    background-color: #ffffff;
+    padding: 0 30px;
+    position: fixed;
+    right: 0px;
+    top: 105px;
+    z-index: 200;
+}
+
+.HMI0 {
+    display: block;
+    width: 100%;
+    margin-top: 12%;
+}
+
+.HMI1 {
+    text-align: left;
+}
+
+.HMI2,
+.HMI3 {
+    text-align: left;
+    border-top: 2px solid #ededed;
+}
+
+.HMI2 p {
+    font-size: 15px;
+    padding-left: 40px;
+}
+
+.HMI3 p {
+    font-size: 15px;
+    padding-left: 40px;
+}
+
+.HMI2 ul {
+    margin: 20px 0;
+}
+
+.HMI3 ul {
+    margin: 20px 0;
+}
+
+.HMI1 li {
+    margin: 8px 0;
+}
+
+.HMI2 li {
+    margin: 8px 0;
+}
+
+.HMI3 li {
+    margin: 8px 0;
+}
+
+.HMI1 li a {
+    font-size: 15px;
+    color: #656565;
+}
+
+.HMI1 li a:hover {
+    color: #3493fb;
+}
+
+.HMI2 li a {
+    color: #656565;
+}
+
+.HMI2 li a:hover {
+    color: #3493fb;
+}
+
+.HMI3 li a {
+    color: #656565;
+}
+
+.HMI3 li a:hover {
+    color: #3493fb;
+}
+
+.hamburgerMenu {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s, max-width 1s ease-out;
+}
+
+.show-hamburgerMenu {
+    opacity: 1;
+    max-width: 1000px !important;
+}
+
+.show-overlay {
+    display: block;
+}
+
+/* ---------- box_upper ---------- */
+.box_upper {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 130px;
+}
+
+/* ---------- topbar RWD ---------- */
+@media (max-width: 1100px) {
+    .navbar {
+        height: 105px;
+    }
+
+    .topbar {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #hamburger_outer {
+        display: block;
+    }
+
+    .first-row {
+        width: 400px;
+        align-items: center;
+        height: 60px;
+    }
+
+    .second-row {
+        display: none;
+    }
+
+    .box_upper {
+        height: 105px;
+    }
+}
+
+@media (max-width: 550px) {
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo img {
+        content: url("../images/logo/logo_small_blue.svg");
+    }
+
+    .logo:hover img {
+        content: url("../images/logo/logo_small_lightblue.svg");
+    }
+
+    .first-row {
+        width: 360px;
+    }
+}
+
+@media (max-width: 450px) {
+    .searchbar {
+        display: none;
+    }
+
+    .first-row {
+        width: 200px;
+    }
+}
+
+/* ---------- 以上為 header 區塊 ---------- */
+/*---------- 新文件內容置於該線以下 ---------- */
+
+/*---------- 新文件內容置於該線以上 ---------- */
+/* ---------- 以下為 fooder 區塊 ---------- */
+footer {
+    display: block;
+    background-color: #F4F7FE;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    /* margin-top: auto; */
+}
+
+.footer_div {
+    display: block;
+}
+
+.footer_icon {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.footer_menu {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.footer_icon li {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.footer_menu li {
+    list-style-type: none;
+    display: inline;
+    border: 50px;
+    width: 100px;
+}
+
+.footer_menu li a {
+    padding: 0 10px;
+    color: #656565;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer_menu li a:hover {
+    color: #3493fb;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    height: 25px;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#gotop {
+    /* display: none; */
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+
+.dotopbtn {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.dotopbtn img {
+    width: 100%;
+}
+
+.dotopbtn:hover img {
+    width: 100%;
+    content: url("../images/gototop/gototop_blue.svg");
+}
+
+@media (max-width: 444px) {
+    footer {
+        height: 120px;
+    }
+
+    .footer_menu_outer {
+        display: none;
+    }
+}
+
+/* ---------- 以上為 fooder 區塊 ---------- */

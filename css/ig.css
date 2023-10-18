@@ -1,0 +1,189 @@
+#ig-frame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0 20vh 0;
+}
+
+.ig-container {
+    margin-top: 100px;
+    width: 1000px;
+    justify-content: center;
+}
+
+.ig-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* 各div邊框 */
+.ig-container .option {
+    --border-width: 15px 3px;
+    --border-radius: 0.25rem;
+    --background-spread: 100px;
+    border-radius: var(--border-radius);
+    border: 1px solid black;
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    overflow: hidden;
+    padding: var(--border-width);
+}
+
+.ig-trend-icon {
+    margin-top: 100px;
+}
+
+.ig-container .option::after {
+    content: "12";
+    position: absolute;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        #00d1ff 0deg,
+        #ffffff 106.88deg,
+        #205eff 206.25deg,
+        #00f0ff 286.87deg,
+        #ffffff 360deg
+    );
+    top: calc(var(--background-spread) * -1);
+    left: calc(var(--background-spread) * -1);
+    right: calc(var(--background-spread) * -1);
+    bottom: calc(var(--background-spread) * -1);
+    z-index: -1;
+    animation: 3s rotate linear infinite;
+}
+
+/* 各div內圖片樣式 */
+.ig-container .option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    width: 180px;
+    height: 180px;
+    padding: 0.8rem 0.1rem;
+    border-radius: calc(var(--border-radius) - var(--border-width) / 2);
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600px;
+    transition: color 1s ease-in-out;
+}
+
+/* 文字樣式 */
+.ig-container .option span:hover {
+    color: rgb(0, 194, 253);
+    font-size: 1rem;
+    font-weight: 600px;
+    transition: color 1s ease-in-out;
+    text-align: center;
+}
+
+.ig-container .option.op-a1 span {
+    background-image: url(../images/ig/kol1.svg);
+}
+
+.ig-container .option.op-a2 span {
+    background-image: url(../images/ig/kol2.svg);
+}
+
+.ig-container .option.op-a3 span {
+    background-image: url(../images/ig/kol3.svg);
+}
+
+.ig-container .option.op-a4 span {
+    background-image: url(../images/ig/kol4.svg);
+}
+
+.ig-container .option.op-a5 span {
+    background-image: url(../images/ig/kol5.svg);
+}
+
+.ig-container .option.op-a6 span {
+    background-image: url(../images/ig/kol6.svg);
+}
+
+.ig-container .option.op-a7 span {
+    background-image: url(../images/ig/kol7.svg);
+}
+
+.ig-container .option.op-a8 span {
+    background-image: url(../images/ig/kol8.svg);
+}
+
+/* 下方圖式 */
+.ig-trend-icon.op-a1 {
+    background-image: url(../images/ig/IG合作標題.svg);
+    background-size: cover;
+    background-position: center;
+    width: 403px;
+    height: 120px;
+    background-repeat: no-repeat;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* rwd */
+@media (max-width: 1010px) {
+    .ig-container {
+        width: 783px;
+    }
+}
+
+@media (max-width: 840px) {
+    .ig-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ig-container .option span {
+        color: rgb(0, 194, 253);
+    }
+}
+@media (max-width: 783px) {
+    .ig-container {
+        width: 549px;
+    }
+}
+@media (max-width: 549px) {
+    .ig-container {
+        width: 386px;
+    }
+    .ig-trend-icon.op-a1 {
+        width: 360px;
+        background-size: contain;
+    }
+}
+@media (max-width: 403px) {
+    .ig-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ig-container {
+        width: 326px;
+    }
+
+    .ig-trend-icon.op-a1 {
+        width: 256px;
+    }
+}

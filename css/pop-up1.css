@@ -1,0 +1,720 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+/* ---------- 共用區 ---------- */
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    line-height: 1;
+    background-image: url("../images/toyBG/B15.svg");
+    background-attachment: fixed;
+}
+img {
+    display: block;
+    width: 100%;
+}
+ul li {
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+}
+/* ---------- navigation ---------- */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60px;
+    background-color: #3493fb;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-direction: row;
+}
+.top.A {
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.top-A-left,
+.top-A-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-A-left {
+    margin-left: 40px;
+}
+.top-A-right {
+    margin-right: 40px;
+}
+.top.A img {
+    width: 127px;
+    height: 40px;
+}
+.top-A-left span {
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.top-A-left:hover img {
+    content: url("../images/logo/pop_top_white_hover.svg");
+}
+.top-A-right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
+.top-A-right:hover a {
+    background-color: #007aff;
+}
+/* ---------- <section id="banner"> ---------- */
+#banner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/toyBG/B01.svg");
+    clip-path: polygon(0 0, 100% 0, 100% calc(100vh - 150px), 0 100%);
+    overflow: hidden;
+    position: relative;
+}
+#popMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/toyBG/pop-topbar-background.svg");
+    background-color: rgba(200, 200, 200, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.popmenu {
+    display: flex;
+    height: 100px;
+    width: auto;
+    margin: 0 10px;
+}
+.popmenu.back:hover img {
+    content: url("../images/pop-topbar/back_red.svg");
+}
+.popmenu.about:hover img {
+    content: url("../images/pop-topbar/about_red.svg");
+}
+.popmenu.flagship:hover img {
+    content: url("../images/pop-topbar/flagship_red.svg");
+}
+.popmenu.product:hover img {
+    content: url("../images/pop-topbar/product_red.svg");
+}
+#popMenuB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 666;
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/toyBG/pop-topbar-background.svg");
+    background-color: rgba(200, 200, 200, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.popmenuB {
+    display: flex;
+    height: 100px;
+    width: auto;
+    margin: 0 10px;
+}
+.popmenuB.home:hover img {
+    content: url("../images/pop-topbar/home_red.svg");
+}
+.popmenuB.about:hover img {
+    content: url("../images/pop-topbar/about_red.svg");
+}
+.popmenuB.flagship:hover img {
+    content: url("../images/pop-topbar/flagship_red.svg");
+}
+.popmenuB.product:hover img {
+    content: url("../images/pop-topbar/product_red.svg");
+}
+.pophamburger {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    display: none;
+    margin-right: 20px;
+}
+#popMenu button img {
+    width: 60px;
+    height: 60px;
+}
+#popMenuB button img {
+    width: 60px;
+    height: 60px;
+}
+.pophamburger:hover img {
+    content: url("../images/icon/pop-hamburger-blue.svg");
+}
+.banner-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+.banner-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+@keyframes helloaliens {
+    0% {
+        left: -100vw;
+        opacity: 0;
+    }
+    20% {
+        left: -100vw;
+        opacity: 0;
+    }
+    40% {
+        left: -100vw;
+        opacity: 0;
+    }
+    60% {
+        left: -30px;
+        opacity: 1;
+    }
+    80% {
+        left: -30px;
+        opacity: 1;
+    }
+    100% {
+        left: -100vw;
+        opacity: 0;
+    }
+}
+.helloaliens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: -30px;
+    animation: helloaliens 2.4s ease infinite;
+}
+.toy-story-logo {
+    display: block;
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    z-index: 5;
+}
+@keyframes zoomAnimation0 {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.08);
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.chara0 {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 58%;
+    z-index: 10;
+    animation: zoomAnimation0 2.4s ease infinite;
+}
+@keyframes zoomAnimation1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    30% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(0, 20px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    80% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.chara1 {
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    z-index: 6;
+    animation: zoomAnimation1 2.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+        infinite;
+}
+@keyframes zoomAnimation2 {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+.chara2 {
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 160px;
+    top: 36%;
+    z-index: 3;
+    animation: zoomAnimation2 2.4s infinite;
+}
+@keyframes zoomAnimation3 {
+    0% {
+        top: 20vh;
+        opacity: 0;
+    }
+    20% {
+        top: 20vh;
+        opacity: 0;
+    }
+    40% {
+        top: 20vh;
+        opacity: 0;
+    }
+    60% {
+        top: 5%;
+        opacity: 1;
+    }
+    80% {
+        top: 5%;
+        opacity: 1;
+    }
+    100% {
+        top: 20vh;
+        opacity: 0;
+    }
+}
+.chara3 {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 36%;
+    z-index: 3;
+    animation: zoomAnimation3 2.4s infinite;
+}
+@media (max-width: 1700px) {
+    .toy-story-logo {
+        width: 420px;
+        height: 420px;
+    }
+}
+@media (max-width: 1600px) {
+    /* y*0.9 */
+    .banner-inner {
+        height: 450px;
+    }
+    .toy-story-logo {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 1500px) {
+    /*  logo*0.8 */
+    .toy-story-logo {
+        width: 360px;
+        height: 360px;
+    }
+    /* .chara*0.9 */
+    .chara0 {
+        width: 360px;
+        height: 270px;
+    }
+    .chara1 {
+        width: 540px;
+        height: 270px;
+    }
+    .chara2 {
+        width: 540px;
+        height: 144px;
+    }
+    .chara3 {
+        width: 360px;
+        height: 360px;
+    }
+}
+@media (max-width: 1400px) {
+    /* y*0.8 */
+    .banner-inner {
+        height: 400px;
+    }
+    /*  logo*0.75 */
+    .toy-story-logo {
+        width: 337px;
+        height: 337px;
+    }
+    /* .chara*0.85 */
+    .chara0 {
+        width: 340px;
+        height: 255px;
+    }
+    .chara1 {
+        width: 510px;
+        height: 255px;
+    }
+    .chara2 {
+        width: 510px;
+        height: 136px;
+    }
+    .chara3 {
+        width: 340px;
+        height: 340px;
+    }
+}
+@media (max-width: 1300px) {
+    /*  logo*0.7 */
+    .toy-story-logo {
+        width: 315px;
+        height: 315px;
+    }
+    /* .chara*0.8 */
+    .chara0 {
+        width: 320px;
+        height: 240px;
+    }
+    .chara1 {
+        width: 480px;
+        height: 240px;
+    }
+    .chara2 {
+        width: 480px;
+        height: 128px;
+    }
+    .chara3 {
+        width: 320px;
+        height: 320px;
+    }
+}
+@media (max-width: 1200px) {
+    /*  logo*0.65 */
+    .toy-story-logo {
+        width: 293px;
+        height: 293px;
+    }
+    /* .chara*0.75 */
+    .chara0 {
+        width: 300px;
+        height: 225px;
+    }
+    .chara1 {
+        width: 450px;
+        height: 225px;
+    }
+    .chara2 {
+        width: 450px;
+        height: 120px;
+    }
+    .chara3 {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 1100px) {
+    /* y*0.75 */
+    .banner-inner {
+        height: 375px;
+    }
+    /*  logo*0.6 */
+    .toy-story-logo {
+        width: 270px;
+        height: 270px;
+    }
+    /* .chara*0.7 */
+    .chara0 {
+        width: 280px;
+        height: 210px;
+    }
+    .chara1 {
+        width: 420px;
+        height: 210px;
+    }
+    .chara2 {
+        width: 420px;
+        height: 112px;
+    }
+    .chara3 {
+        width: 280px;
+        height: 280px;
+    }
+}
+@media (max-width: 1000px) {
+    /* .chara*0.65 */
+    .chara0 {
+        width: 260px;
+        height: 195px;
+    }
+    .chara1 {
+        width: 390px;
+        height: 195px;
+    }
+    .chara2 {
+        width: 390px;
+        height: 104px;
+    }
+    .chara3 {
+        width: 260px;
+        height: 260px;
+    }
+}
+@media (max-width: 800px) {
+    /* y*0.7 */
+    .banner-inner {
+        height: 350px;
+    }
+    /*  logo*0.55 */
+    .toy-story-logo {
+        width: 248px;
+        height: 248px;
+    }
+    /* .chara*0.6 */
+    .chara0 {
+        width: 240px;
+        height: 180px;
+    }
+    .chara1 {
+        width: 360px;
+        height: 180px;
+    }
+    .chara2 {
+        width: 360px;
+        height: 96px;
+    }
+    .chara3 {
+        width: 240px;
+        height: 240px;
+    }
+    .banner-outer {
+        height: calc(100vh - 220px);
+    }
+    #popMenu,
+    #popMenuB {
+        height: 70px;
+    }
+    .popmenu.back,
+    .popmenu.about,
+    .popmenu.flagship,
+    .popmenu.product {
+        height: 70px;
+    }
+}
+@media (max-width: 600px) {
+    /* y*0.65 */
+    .banner-inner {
+        height: 325px;
+    }
+    /*  logo*0.5 */
+    .toy-story-logo {
+        width: 225px;
+        height: 225px;
+    }
+    /* .chara*0.55 */
+    .chara0 {
+        width: 220px;
+        height: 165px;
+    }
+    .chara1 {
+        width: 330px;
+        height: 165px;
+    }
+    .chara2 {
+        width: 330px;
+        height: 88px;
+    }
+    .chara3 {
+        width: 220px;
+        height: 220px;
+    }
+    .back-to-text {
+        display: none;
+    }
+    #popMenu,
+    #popMenuB {
+        height: 60px;
+        background-image: none;
+        background-color: rgba(200, 200, 200, 0.5);
+        backdrop-filter: blur(7px);
+        justify-content: end;
+    }
+    .banner-outer {
+        height: calc(100vh - 210px);
+    }
+    .pophamburger {
+        display: block;
+    }
+    .popmenu.back,
+    .popmenu.about,
+    .popmenu.flagship,
+    .popmenu.product {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    /* y*0.6 */
+    .banner-inner {
+        height: 300px;
+    }
+    /*  logo*0.45 */
+    .toy-story-logo {
+        width: 200px;
+        height: 200px;
+    }
+    /* .chara*0.5 */
+    .chara0 {
+        width: 200px;
+        height: 150px;
+    }
+    .chara1 {
+        width: 300px;
+        height: 150px;
+    }
+    .chara2 {
+        width: 300px;
+        height: 80px;
+    }
+    .chara3 {
+        width: 200px;
+        height: 200px;
+    }
+    .top-A-left {
+        margin-left: 30px;
+    }
+    .top-A-right {
+        margin-right: 30px;
+    }
+    .top.A img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+    .top-A-left img {
+        content: url("../images/logo/pop_top_white_small.svg");
+    }
+    .top-A-left:hover img {
+        content: url("../images/logo/pop_top_white_small_hover.svg");
+    }
+}
+@media (max-width: 400px) {
+    /* y*0.55 */
+    .banner-inner {
+        height: 275px;
+    }
+    /*  logo*0.4 */
+    .toy-story-logo {
+        width: 180px;
+        height: 180px;
+    }
+    /* .chara*0.45 */
+    .chara0 {
+        width: 180px;
+        height: 135px;
+    }
+    .chara1 {
+        width: 270px;
+        height: 135px;
+    }
+    .chara2 {
+        width: 270px;
+        height: 72px;
+    }
+    .chara3 {
+        width: 180px;
+        height: 180px;
+    }
+    .top-A-left {
+        margin-left: 20px;
+    }
+    .top-A-right {
+        margin-right: 20px;
+    }
+}
+/* ---------- 以下為 pop 專用的 navbar 淡入淡出 ---------- */
+#popMenu {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+#popMenuB {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+#popMenuB {
+    top: -200px;
+    opacity: 0;
+}
+/* ---------- 以上為 pop  專用的 navbar 淡入淡出 ---------- */
+.hidden-overflow {
+    overflow: hidden;
+}

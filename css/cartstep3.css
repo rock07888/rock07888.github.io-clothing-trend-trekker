@@ -1,0 +1,219 @@
+#shoppingCart3 {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.cartstep3 {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 7vh 0 50vh 0;
+    border: 0;
+    padding: 0;
+}
+.cartstep3-flow {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+.carttable3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    background-color: antiquewhite;
+    border: 2px solid #ededed;
+    margin-top: 4vh;
+}
+/**/
+.settlement3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 14px;
+    border-left: 2px solid #ededed;
+    border-right: 2px solid #ededed;
+}
+.order_number3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+    border: 2px solid #ededed;
+}
+.order_number_inner3 span {
+    margin-left: 30px;
+}
+.order_product_title3 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 30px;
+}
+.order-info3 {
+    width: 100%;
+}
+.order-info-row3 {
+    background-color: #F4F7FE;
+    height: 40px;
+    font-size: 14px;
+}
+.mypro_outer3 {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+.mypro3 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+}
+.mypro3 img {
+    width: 100px;
+    height: 100px;
+}
+.order_detail3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ededed;
+}
+.order_product3 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ededed;
+}
+.order_detail3 p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.order_detail3 span {
+    margin-left: 30px;
+}
+.mypro_detail3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_price3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 2px solid #ededed;
+}
+.order_price_title3 {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+}
+.order_price_price3 {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+}
+.order_price_NT {
+    color: red;
+    font-weight: bolder;
+}
+
+/**/
+.cart3-next-step {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-end;
+    border: 2px;
+}
+.cart3-next-step-btn {
+    cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 36px;
+    color: #ffffff;
+    background-color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+.cart3-next-step-btn:hover {
+    color: #3493fb;
+    background-color: #ffffff;
+}
+
+/* RWD：cartstep1 */
+@media (max-width: 800px) {
+    .cartstep3 {
+        font-size: 14px;
+    }
+    .cartstep3 {
+        width: 600px;
+    }
+    .cartstep3-flow {
+        width: 60%;
+    }
+    .mypro3 {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media (max-width: 600px) {
+    .cartstep3 {
+        width: 360px;
+    }
+    .cartstep3-flow {
+        width: 80%;
+    }
+    .cart3-next-step {
+        width: 360px;
+    }
+    .mypro3 {
+        margin-left: 10px;
+        width: 75px;
+        height: 75px;
+    }
+    .mypro3 img {
+        width: 60px;
+        height: 60px;
+    }
+    .mypro_outer3 ul {
+        padding-left: 10px;
+    }
+    .order_product3 p {
+        margin-left: 10px;
+    }
+    .order_detail3 p {
+        margin-left: 10px;
+    }
+    .order_detail3 span {
+        margin-left: 10px;
+    }
+    .order_number_inner3 {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .order_number_inner3 span {
+        margin: 0;
+    }
+    .order_price_price3 {
+        margin-right: 10px;
+    }
+}

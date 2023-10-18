@@ -1,0 +1,527 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* 推薦區包層 */
+.outfit-frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20vh;
+
+}
+
+
+.outfit-inner {
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.trekker-rwd-frame,
+.jusky-rwd-frame {
+    margin-top: 100px;
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid yellow; */
+}
+
+
+/*trekker 文字簡述區 */
+.trekker_itr {
+    box-shadow: 1px 0px 6px;
+    background-color: rgba(239, 245, 255, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: flex;
+    align-self: self-start;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 20px;
+}
+
+
+
+.trekker_icon {
+    width: 50%;
+    height: 80px;
+    align-self: center;
+}
+
+.trekker_itr p {
+    text-align: center;
+}
+
+.trekker_itr ul li {
+    width: 100%;
+    padding-top: 20px;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+/* jusky文字簡述區 */
+.jusky_itr {
+    box-shadow: 1px 0px 6px;
+    background-color: rgba(239, 245, 255, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+    display: flex;
+    align-self: end;
+    flex-direction: column;
+    width: 30%;
+    margin: 50px 20px 0;
+    padding: 10px 20px;
+}
+
+.jusky_icon {
+    align-self: center;
+    width: 50%;
+    height: 80px;
+}
+
+
+
+.jusky_itr p {
+    text-align: center;
+}
+
+.jusky_itr ul li {
+    width: 100%;
+    padding-top: 20px;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+/* trekker推薦區 */
+
+/* .trekker-frame:hover {
+    transform: perspective(500px) rotateX(30deg) rotateY(30deg);
+} */
+
+.trekker-frame {
+    background-image: url(../images/outfit/trendtrekker.svg);
+    background-size: cover;
+    width: 50%;
+    height: 365px;
+    align-self: self-start;
+    /* border: 2px solid brown; */
+}
+
+/* jusky推薦區 */
+.jusky-frame {
+    align-self: self-end;
+    /* margin-top: 280px; */
+    background-image: url(../images/outfit/juksy.svg);
+    background-size: cover;
+    width: 50%;
+    height: 345px;
+    /* border: 2px solid burlywood; */
+}
+
+
+/* rwd */
+@media (max-width:1395px) {
+    .outfit-inner {
+        width: 1200px;
+    }
+
+    .trekker-frame,
+    .jusky-frame {
+        height: 324px;
+    }
+}
+
+@media (max-width:1260px) {
+    .outfit-inner {
+        width: 1100px;
+    }
+
+    .trekker-frame,
+    .jusky-frame {
+        height: 304px;
+    }
+
+}
+
+@media (max-width:1120px) {
+    .outfit-inner {
+        width: 1000px;
+    }
+
+    .trekker-frame,
+    .jusky-frame {
+        height: 284px;
+    }
+
+}
+
+@media (max-width:1020px) {
+    .outfit-inner {
+        width: 950px;
+    }
+
+
+    .trekker-frame,
+    .jusky-frame {
+        height: 264px;
+    }
+
+
+
+    .jusky_itr {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width:970px) {
+    .outfit-inner {
+        width: 850px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 100px;
+
+    }
+
+    .trekker-rwd-frame {
+        box-shadow: 1px 0px 6px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .jusky-rwd-frame {
+        box-shadow: 1px 0px 6px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .trekker-frame {
+        background-image: url(../images/outfit/trendrwd.svg);
+
+        margin-right: 10px;
+    }
+
+    .jusky-frame {
+        background-image: url(../images/outfit/juskyrwd.svg);
+        margin-left: 10px;
+    }
+
+    .trekker-frame,
+    .jusky-frame {
+        
+        margin: 10px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 320px;
+        height: 434px;
+        align-self: center;
+    }
+
+    .trekker_itr,
+    .jusky_itr {
+        /* box-shadow: none; */
+       
+        /* background-color: rgba(255, 255, 255, 0.5); */
+        filter: blur(0.3px) brightness(1);
+        align-self: center;
+        margin: 0;
+        width: 50%;
+        height: 436px;
+        margin: 10px;
+
+    }
+
+    .trekker_icon,
+    .jusky_icon {
+        height: 60px;
+    }
+
+}
+
+@media (max-width:875px) {
+
+    .trekker-frame,
+    .jusky-frame {
+        height: 95%;
+    }
+    .jusky_itr,.trekker_itr{
+        height: 480px;
+    }
+    
+}
+
+@media (max-width:787px) {
+
+    .trekker-rwd-frame,
+    .jusky-rwd-frame {
+        background-image: url(../images/outfit/logoicon.svg);
+        background-size: auto;
+        background-repeat: repeat;
+        background-position: center;
+        box-shadow: 1px 0px 6px;
+        width: 100%;
+        height: 100%;
+        animation: gradient 20s ease-in-out infinite;
+        /* opacity: 0.9; */
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0 12%;
+        }
+
+        30% {
+            background-position: 50% 50%
+        }
+
+        50% {
+            background-position: 100% 100%;
+        }
+
+        100% {
+            background-position: 0 12%;
+        }
+    }
+
+    .outfit-inner {
+        width: 500px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 100px;
+
+    }
+
+
+    .trekker-frame,
+    .jusky-frame {
+        display: none;
+        /* height: 95%;
+        align-self: center; */
+    }
+    .jusky_itr p {margin-top: 10px;}
+    .trekker_itr,
+    .jusky_itr {
+        box-shadow: none;
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        margin: 10px;
+
+    }
+
+    .trekker_icon,
+    .jusky_icon {
+        height: 60px;
+    }
+    .trekker_itr {
+        background-color: rgba(239, 245, 255, 0.2);
+    }
+    .jusky_itr {
+        background-color: rgba(239, 245, 255, 0.2);
+    }
+}
+@media (max-width:575px) {
+    .trekker-rwd-frame,
+    .jusky-rwd-frame{
+        width: 300px;
+    }
+}
+
+
+/* .trekker-img {
+    background-image: url(../images/outfit/trendtrekker.svg);
+    background-size: cover;
+    width: 370px;
+    height: 400px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    top: -6px;
+    left: -30px;
+    margin-left: 50px;
+
+} */
+
+/* 下方陰影 */
+/* .trekker-polygon2 {
+    filter: drop-shadow(3px 5px 20px rgba(119, 122, 137, 0.8));
+    position: absolute;
+    top: 0;
+    width: 370px;
+    height: 400px;
+    fill: #ededed;
+    stroke: #7a7a7a;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+
+} */
+
+/* .jusky-img {
+    
+    background-image: url(../images/outfit/jusky1.svg);
+    background-size: cover;
+    width: 350px;
+    height: 400px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    top: -15px;
+    right: 25px;
+    margin-left: 50px;
+}
+
+/* 下方陰影 
+.jusky-polygon2 {
+    filter: drop-shadow(4px 8px 20px rgba(119, 122, 137, 0.8));
+    position: absolute;
+    top: 0;
+    right: 1;
+    width: 370px;
+    height: 400px;
+    fill: #ededed;
+    stroke: #7a7a7a;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+} */

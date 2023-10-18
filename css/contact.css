@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+/* 聯絡我們 */
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+
+.contact_title {
+    margin-bottom: 25px;
+}
+
+.contact_title span {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 22px;
+}
+
+/* 表單外層 */
+.contact_frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    padding: 20px 0;
+    border: 1px solid rgba(122, 122, 122, 0.5);
+}
+
+.member_name,
+.member_phone,
+.member_email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 70%;
+    height: 25px;
+}
+
+.member_comment {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.member_name label,
+.member_phone label,
+.member_email label,
+.member_comment label {
+    width: 100px;
+}
+
+.member_comment label {
+    margin-bottom: 14px;
+}
+
+.member_name input,
+.member_phone input,
+.member_email input {
+    width: 150px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+
+.member_comment textarea {
+    resize: none;
+    width: calc(100% - 40px);
+    height: 100px;
+    margin: 0;
+    padding: 20px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    width: 70%;
+}
+
+.file-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 14px 0;
+}
+
+.file-input span {
+    width: 100px;
+}
+
+.upload span {
+    color: #656565;
+}
+
+.file-input span {
+    color: #000000;
+    margin-right: 20px;
+}
+.file-input {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.file-input label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #003060;
+    border: 1px solid #003060;
+    border-radius: 3px;
+    padding: 6px 10px;
+}
+
+.file-input label:hover {
+    background-color: #003060;
+    color: #ffffff;
+}
+
+.sub_reset {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 70%;
+    margin-top: 30px;
+    border-top: 1px solid rgba(122, 122, 122, 0.5);
+}
+
+.resetBtn {
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.resetBtn input {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+.resetBtn input:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+
+.submitBtn {
+    margin-top: 30px;
+}
+
+.submitBtn input {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80px;
+    height: 36px;
+    background-color: #3493fb;
+    color: #ffffff;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+.submitBtn input:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+@media (max-width: 800px) {
+    .contact_frame {
+        width: 450px;
+    }
+    .member_name,
+    .member_phone,
+    .member_email,
+    .member_comment,
+    .upload,
+    .sub_reset{
+        width: 75%;
+    }
+}
+@media (max-width: 600px) {
+    .contact_frame {
+        width: 400px;
+    }
+    .member_name,
+    .member_phone,
+    .member_email,
+    .member_comment,
+    .upload,
+    .sub_reset{
+        width: 85%;
+    }
+}
+@media (max-width: 500px) {
+    .contact_frame {
+        width: 380px;
+    }
+}
+@media (max-width: 400px) {
+    .contact_frame {
+        width: 360px;
+    }
+}

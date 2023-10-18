@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- 網站內容 -->
+    <meta name="description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta name="keywords" content="NAUTICA,BOHRHOO,FREAK'S STORE,PIN SKTBS,穿搭,選貨,潮流服飾">
+    <!-- 社群媒體分享 -->
+    <meta property="og:locale" content="zh-hant-tw" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trend Trekker 潮流服飾代購選貨">
+    <meta property="og:description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta property="og:site_name" content="Trend Trekker 潮流服飾代購選貨">
+    <title>Trend Trekker 潮流服飾代購選貨</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <script src="https://kit.fontawesome.com/3c90ad92f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/FAQ.CSS">
+    <link rel="icon" href="./images/logo/logo_small_blue.svg" />
+</head>
+
+<body>
+    <header>
+        <!------------ hamburger：灰色玻璃遮罩 ------------>
+        <div class="overlay"></div>
+        <!------------ navbar ------------>
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <div class="marquee">
+                <p>Trend Trekker 週年慶 好禮享不完</p>
+                <p>點選「我要評論」 給予回饋 拿優惠券</p>
+                <p>6/13 ~ 7/13 限量聯名商品獨家販售中！ </p>
+            </div>
+            <div class="topbar">
+                <!-- 左：商標 -->
+                <div class="logo">
+                    <a class="logo-img" href="index.html"><img src="./images/logo/TopbarLogo_blue.svg"
+                            alt="Trend Trekker logo"></a>
+                </div>
+                <!-- 右：功能選單 -->
+                <div class="topbar-row">
+                    <div class="first-row">
+                        <div class="icons">
+                            <form class="searchbar">
+                                <input type="text" placeholder="請輸入關鍵字">
+                                <input type="image" src="./images/icon/search_gray.svg"
+                                    onmouseover="this.src='./images/icon/search_blue.svg';"
+                                    onmouseout="this.src='./images/icon/search_gray.svg';" alt="搜索">
+                            </form>
+                            <a href="sign.html" class="icon_member"><img src="./images/icon/member_gray.svg"
+                                    onmouseover="this.src='./images/icon/member_blue.svg';"
+                                    onmouseout="this.src='./images/icon/member_gray.svg';" alt=""></a>
+                            <a href="memberD.html" class="icon_favorate"><img src="./images/icon/favorate_gray.svg"
+                                    onmouseover="this.src='./images/icon/favorate_blue.svg';"
+                                    onmouseout="this.src='./images/icon/favorate_gray.svg';" alt=""></a>
+                            <a href="cartstep1.html" class="icon_shop"><img src="./images/icon/shop_gray.svg"
+                                    onmouseover="this.src='./images/icon/shop_blue.svg';"
+                                    onmouseout="this.src='./images/icon/shop_gray.svg';" alt=""></a>
+                        </div>
+                        <!-- 漢堡按鈕 -->
+                        <div id="hamburger_outer">
+                            <button class="hamburger">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="second-row">
+                        <div class="topbar-menu">
+                            <ul>
+                                <li><a href="new-products.html">最新商品</a></li>
+                                <li><a href="top-sales.html">銷售排行</a></li>
+                                <li><a href="pop-up.html">快閃活動</a></li>
+                                <li><a href="index.html#outfit-frame">穿搭指南</a></li>
+                                <li><span onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()" id="mp">所有商品
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                                <li><span onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()" id="bc">品牌分類
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="allProduct" onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()">
+            <div class="allProduct_inner">
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'tops.html';"><img
+                            src="./images/allProduct/shirt.svg" alt="Icon">上衣</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'jackets.html';"><img
+                            src="./images/allProduct/jacket.svg" alt="Icon">外套</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'pants.html';"><img
+                            src="./images/allProduct/pants.svg" alt="Icon">褲裝</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'accessories.html';"><img
+                            src="./images/allProduct/accessories.svg" alt="Icon">配件</button>
+                </div>
+            </div>
+        </div>
+        <div id="brandClass" onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()">
+            <div class="brandClass_inner">
+                <div class="brandChoice">
+                    <button class="brand_btn A" onclick="window.location.href = 'pinsktbs.html';"><img
+                            src="./images/brand/PIN_SKTBS.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn B" onclick="window.location.href = 'bohrhoo.html';"><img
+                            src="./images/brand/BOHRHOO.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn C" onclick="window.location.href = 'freak.html';"><img
+                            src="./images/brand/FREAKS_STORE.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn D" onclick="window.location.href = 'nutcia.html';"><img
+                            src="./images/brand/NAUTICA.svg" alt="Icon"></button>
+                </div>
+            </div>
+        </div>
+        <div class="hamburgerMenu">
+            <div class="hamburgerMenu_inner">
+                <div class="HMI0"></div>
+                <div class="HMI1">
+                    <ul>
+                        <li><a href="#">最新商品</a></li>
+                        <li><a href="#">銷售排行</a></li>
+                        <li><a href="pop-up.html">快閃活動</a></li>
+                        <li><a href="index.html#outfit-frame">穿搭指南</a></li>
+                    </ul>
+                </div>
+                <div class="HMI2">
+                    <p>所有商品</p>
+                    <ul>
+                        <li><a href="tops.html">上衣</a></li>
+                        <li><a href="jackets.html">外套</a></li>
+                        <li><a href="pants.html">褲裝</a></li>
+                        <li><a href="accessories.html">配件</a></li>
+                    </ul>
+                </div>
+                <div class="HMI3">
+                    <p>品牌分類</p>
+                    <ul>
+                        <li><a href="pinsktbs.html">PIN SKTBS</a></li>
+                        <li><a href="bohrhoo.html">BOHRHOO</a></li>
+                        <li><a href="freak.html">FREAK'S STORE</a></li>
+                        <li><a href="nutcia.html">NAUTICA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="box_upper"></div>
+        </section>
+    </header>
+    <!-- ********** 新文件內容置於該線以下 ********** -->
+    <section id="faq">
+        <div class="faq_frame">
+            <h2>FAQ</h2>
+        </div>
+        <div class="faq_content">
+            <!-- 購物區 -->
+            <div class="buyouter">
+                <div class="faq_option">
+                    <span class="asdd">購物常見問題</span>
+                </div>
+                <button class="faqbotton" onclick="asd()">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="buy_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">購物有七天鑑賞期嗎?</a></li>
+                        <li><a href="#">購物有會員點數可以累積嗎?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 會員區 -->
+            <div class="buyouter2">
+                <div class="faq_option">
+                    <span class="fo">會員常見問題 </span>
+                </div>
+                <button class="faqbotton2">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="member_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">會員優惠券?</a></li>
+                        <li><a href="#">會員制度獎勵?</a></li>
+                        <li><a href="#">會員生日禮金?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 付款區 -->
+            <div class="buyouter3">
+                <div class="faq_option">
+                    <span class="fo">付款常見問題 </span>
+                </div>
+                <button class="faqbotton3">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="pay_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">是否支援行動支付?</a></li>
+                        <li><a href="#">可以使用哪些銀行的信用卡?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 退款區 -->
+            <div class="buyouter4">
+                <div class="faq_option">
+                    <span>退款常見問題 </span>
+                </div>
+                <button class="faqbotton4">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="refund_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">如何退款?</a></li>
+                        <li><a href="#">甚麼情況可以退款?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 退換貨區 -->
+            <div class="buyouter5">
+                <div class="faq_option">
+                    <span>退、換貨常見問題 </span>
+                </div>
+                <button class="faqbotton5">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="return_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">怎麼申請退貨?</a></li>
+                        <li><a href="#">退款費用如何計算?</a></li>
+                        <li><a href="#">收到商品不符期望可以退貨嗎?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 配送區 -->
+            <div class="buyouter6">
+                <div class="faq_option">
+                    <span>配送取貨常見問題 </span>
+                </div>
+                <button class="faqbotton6">
+                    <span class="linebar"></span>
+                    <span class="linebar"></span>
+                </button>
+            </div>
+            <div id="ship_content">
+                <div class="manyQ">
+                    <ul>
+                        <li><a href="#">有甚麼寄送方式?</a></li>
+                        <li><a href="#">可以選擇到貨時段嗎?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ********** 新文件內容置於該線以上 ********** -->
+    <!------------ footer ------------>
+    <footer>
+        <div class="footer_div">
+            <ul class="footer_icon">
+                <li><a href="https://zh-tw.facebook.com/" target="_blank"><img src="./images/community/FB_gray.svg"
+                            onmouseover="this.src='./images/community/FB_blue.svg';"
+                            onmouseout="this.src='./images/community/FB_gray.svg';" alt=""></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/community/IG_gray.svg"
+                            onmouseover="this.src='./images/community/IG_blue.svg';"
+                            onmouseout="this.src='./images/community/IG_gray.svg';" alt=""></a></li>
+                <li><a href="https://line.me/en/" target="_blank"><img src="./images/community/LINE_gray.svg"
+                            onmouseover="this.src='./images/community/LINE_blue.svg';"
+                            onmouseout="this.src='./images/community/LINE_gray.svg';" alt=""></a></li>
+            </ul>
+            <div class="footer_menu_outer">
+                <ul class="footer_menu">
+                    <li class="footer_menu_li">
+                        <a class="footer_menu1" href="faqterms.html">FAQ</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu2" href="privacyterms.html">隱私權政策</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu3" href="serviceterms.html">服務條款</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="contactterms.html">聯絡我們</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="#">訂閱電子報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Trend Trekker. All Rights Reserved.</p>
+            </div>
+            <div id="gotop">
+                <div class="dotopbtn">
+                    <img src="./images/gototop/gototop_gray.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- jQuery Core 3.7.0 原始碼，一定要放在最上面，先被執行 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- 自己的 navbar.js 必須放在後面  -->
+
+<script src="https://kit.fontawesome.com/3c90ad92f4.js" crossorigin="anonymous"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/faq.js"></script>
+
+</html>

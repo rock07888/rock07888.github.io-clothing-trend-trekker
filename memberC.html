@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- 網站內容 -->
+    <meta name="description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta name="keywords" content="NAUTICA,BOHRHOO,FREAK'S STORE,PIN SKTBS,穿搭,選貨,潮流服飾">
+    <!-- 社群媒體分享 -->
+    <meta property="og:locale" content="zh-hant-tw" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trend Trekker 潮流服飾代購選貨">
+    <meta property="og:description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta property="og:site_name" content="Trend Trekker 潮流服飾代購選貨">
+    <title>Trend Trekker 潮流服飾代購選貨</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/memberC.css">
+    <script src="https://kit.fontawesome.com/3c90ad92f4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/logo/logo_black.svg" />
+    <link rel="stylesheet" href="./css/gotocomment.css">
+</head>
+
+<body>
+    <header>
+        <!------------ hamburger：灰色玻璃遮罩 ------------>
+        <div class="overlay"></div>
+        <!------------ navbar ------------>
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <div class="marquee">
+                <p>Trend Trekker 週年慶 好禮享不完</p>
+                <p>點選「我要評論」 給予回饋 拿優惠券</p>
+                <p>6/13 ~ 7/13 限量聯名商品獨家販售中！ </p>
+            </div>
+            <div class="topbar">
+                <!-- 左：商標 -->
+                <div class="logo">
+                    <a class="logo-img" href="index.html"><img src="./images/logo/TopbarLogo_blue.svg"
+                            alt="Trend Trekker logo"></a>
+                </div>
+                <!-- 右：功能選單 -->
+                <div class="topbar-row">
+                    <div class="first-row">
+                        <div class="icons">
+                            <form class="searchbar">
+                                <input type="text" placeholder="請輸入關鍵字">
+                                <input type="image" src="./images/icon/search_gray.svg"
+                                    onmouseover="this.src='./images/icon/search_blue.svg';"
+                                    onmouseout="this.src='./images/icon/search_gray.svg';" alt="搜索">
+                            </form>
+                            <a href="sign.html" class="icon_member"><img src="./images/icon/member_gray.svg"
+                                    onmouseover="this.src='./images/icon/member_blue.svg';"
+                                    onmouseout="this.src='./images/icon/member_gray.svg';" alt=""></a>
+                            <a href="memberD.html" class="icon_favorate"><img src="./images/icon/favorate_gray.svg"
+                                    onmouseover="this.src='./images/icon/favorate_blue.svg';"
+                                    onmouseout="this.src='./images/icon/favorate_gray.svg';" alt=""></a>
+                            <a href="cartstep1.html" class="icon_shop"><img src="./images/icon/shop_gray.svg"
+                                    onmouseover="this.src='./images/icon/shop_blue.svg';"
+                                    onmouseout="this.src='./images/icon/shop_gray.svg';" alt=""></a>
+                        </div>
+                        <!-- 漢堡按鈕 -->
+                        <div id="hamburger_outer">
+                            <button class="hamburger">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="second-row">
+                        <div class="topbar-menu">
+                            <ul>
+                                <li><a href="new-products.html">最新商品</a></li>
+                                <li><a href="top-sales.html">銷售排行</a></li>
+                                <li><a href="pop-up.html">快閃活動</a></li>
+                                <li><a href="outfitguide.html">穿搭指南</a></li>
+                                <li><span onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()" id="mp">所有商品
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                                <li><span onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()" id="bc">品牌分類
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="allProduct" onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()">
+            <div class="allProduct_inner">
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'tops.html';"><img
+                            src="./images/allProduct/shirt.svg" alt="Icon">上衣</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'jackets.html';"><img
+                            src="./images/allProduct/jacket.svg" alt="Icon">外套</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'pants.html';"><img
+                            src="./images/allProduct/pants.svg" alt="Icon">褲裝</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'accessories.html';"><img
+                            src="./images/allProduct/accessories.svg" alt="Icon">配件</button>
+                </div>
+            </div>
+        </div>
+        <div id="brandClass" onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()">
+            <div class="brandClass_inner">
+                <div class="brandChoice">
+                    <button class="brand_btn A" onclick="window.location.href = 'pinsktbs.html';"><img
+                            src="./images/brand/PIN_SKTBS.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn B" onclick="window.location.href = 'bohrhoo.html';"><img
+                            src="./images/brand/BOHRHOO.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn C" onclick="window.location.href = 'freak.html';"><img
+                            src="./images/brand/FREAKS_STORE.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn D" onclick="window.location.href = 'nutcia.html';"><img
+                            src="./images/brand/NAUTICA.svg" alt="Icon"></button>
+                </div>
+            </div>
+        </div>
+        <div class="hamburgerMenu">
+            <div class="hamburgerMenu_inner">
+                <div class="HMI0"></div>
+                <div class="HMI1">
+                    <ul>
+                        <li><a href="new-products.html">最新商品</a></li>
+                        <li><a href="top-sales.html">銷售排行</a></li>
+                        <li><a href="pop-up.html">快閃活動</a></li>
+                        <li><a href="outfitguide.html">穿搭指南</a></li>
+                    </ul>
+                </div>
+                <div class="HMI2">
+                    <p>所有商品</p>
+                    <ul>
+                        <li><a href="tops.html">上衣</a></li>
+                        <li><a href="jackets.html">外套</a></li>
+                        <li><a href="pants.html">褲裝</a></li>
+                        <li><a href="accessories.html">配件</a></li>
+                    </ul>
+                </div>
+                <div class="HMI3">
+                    <p>品牌分類</p>
+                    <ul>
+                        <li><a href="pinsktbs.html">PIN SKTBS</a></li>
+                        <li><a href="bohrhoo.html">BOHRHOO</a></li>
+                        <li><a href="freak.html">FREAK'S STORE</a></li>
+                        <li><a href="nutcia.html">NAUTICA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="box_upper"></div>
+        </section>
+    </header>
+    <!-- ********** 新文件內容置於該線以下 ********** -->
+    <section id="memberCenter">
+        <div class="mem">
+            <div id="memberBtn">
+                <button class="my Info" onclick="window.location.href = 'memberA.html';">個人資訊</button>
+                <button class="my Dis" onclick="window.location.href = 'memberB.html';">專屬優惠</button>
+                <button class="my Ord" onclick="window.location.href = 'memberC.html';">訂單資訊</button>
+                <button class="my Fav" onclick="window.location.href = 'memberD.html';">按讚好物</button>
+            </div>
+            <div id="infoBox">
+                <div class="infoInner">
+                    <!-- ********** 訂單資訊 ********** -->
+                    <div class="headLine">配送進度查詢</div>
+                    <div class="mysearchbar">
+                        <div class="mysearchbar_row">
+                            <div class="mysearchbar_deliver">
+                                <select name="byDeliver" id="byDeliver">
+                                    <option value="">配送方式</option>
+                                    <option value="宅配到府">宅配到府</option>
+                                    <option value="超商取貨_7-11">7-11 超商取貨</option>
+                                    <option value="超商取貨_全家">全家 超商取貨</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_year">
+                                <select name="byYear" id="byYear">
+                                    <option value="2023" selected>2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_momth">
+                                <select name="byMonth" id="byMonth">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mysearchbar_btns">
+                            <div class="mysearchbar_sum">
+                                <input type="submit" value="查詢">
+                            </div>
+                            <div class="mysearchbar_all">
+                                <button class="collectCheck" onclick="dispalyInfo1()">全部顯示</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_number" id="info1">
+                        <div class="order_number_inner">
+                            <span>成立訂單日期：2023-05-17　</span>
+                            <span>訂單編號：20230517753951</span>
+                        </div>
+                        <div class="expandBtn_outer">
+                            <button class="expandBtn" onclick="toggleCross(this),showInfo1Detail()">
+                                <div class="line horizontal"></div>
+                                <div class="line vertical"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="yellowbackground" id="info1Detail">
+                        <div class="order_step">
+                            <img src="./images/step/order_step3.svg" alt="">
+                        </div>
+                        <div class="order_detail">
+                            <p>取貨人資訊</p>
+                            <span>取貨人姓名：陳小蟀</span>
+                            <span>連絡電話：0921123456</span>
+                            <span>付款方式：貨到付款</span>
+                            <span>配送方式：7-11 超商取貨 松德門市</span>
+                        </div>
+                        <div class="order_product">
+                            <p class="order_product_title">商品詳情</p>
+                            <table class="order-info">
+                                <thead>
+                                    <tr class="order-info-row1">
+                                        <th width="500px">商品訊息</th>
+                                        <th width="150px">售價</th>
+                                        <th width="150px">數量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mypro_outer">
+                                            <div class="mypro">
+                                                <img src="./images/myCollection/Nautica_white.svg" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>Nautica Arch Logo SS Tee 455359</li>
+                                                <li>尺寸：M</li>
+                                                <li>顏色：白</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>
+                                            <div class="mypro_detail">NT$ 790</div>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <div class="mypro_detail">1</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mypro_outer">
+                                            <div class="mypro">
+                                                <img src="./images/myCollection/Freak.svg" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>Freak’s store Relax Fit 845762</li>
+                                                <li>尺寸：L</li>
+                                                <li>顏色：黑白格紋</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>
+                                            <div class="mypro_detail">NT$ 990</div>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <div class="mypro_detail">1</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="order_detail">
+                            <p>統一發票開立方式</p>
+                            <span>發票種類：捐贈</span>
+                        </div>
+                        <div class="order_price">
+                            <div class="order_price_title">
+                                <span>商品總額：</span>
+                                <span>優惠折扣：</span>
+                                <span>運費結算：</span>
+                                <span>訂單總金額：</span>
+                            </div>
+                            <div class="order_price_price">
+                                <span>1,380</span>
+                                <span>79</span>
+                                <span>0</span>
+                                <span class="NT1301">1,301</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headLine">購買紀錄</div>
+                    <div class="mysearchbar">
+                        <div class="mysearchbar_row">
+                            <div class="mysearchbar_deliver">
+                                <select name="byDeliver" id="byDeliver">
+                                    <option value="">配送方式</option>
+                                    <option value="宅配到府">宅配到府</option>
+                                    <option value="超商取貨_7-11">7-11 超商取貨</option>
+                                    <option value="超商取貨_全家">全家 超商取貨</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_year">
+                                <select name="byYear" id="byYear">
+                                    <option value="2023" selected>2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_momth">
+                                <select name="byMonth" id="byMonth">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mysearchbar_btns">
+                            <div class="mysearchbar_sum">
+                                <input type="submit" value="查詢">
+                            </div>
+                            <div class="mysearchbar_all">
+                                <button class="collectCheck" onclick="dispalyInfo2()">全部顯示</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_number" id="info2">
+                        <div class="order_number_inner">
+                            <span>成立訂單日期：2023-05-17　</span>
+                            <span>訂單編號：20230517753951</span>
+                        </div>
+                        <div class="expandBtn_outer">
+                            <button class="expandBtn" onclick="toggleCross(this),showInfo2Detail()">
+                                <div class="line horizontal"></div>
+                                <div class="line vertical"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="yellowbackground" id="info2Detail">
+                        <div class="order_step">
+                            <img src="./images/step/order_step6.svg" alt="">
+                        </div>
+                        <div class="order_detail">
+                            <p>取貨人資訊</p>
+                            <span>取貨人姓名：陳小蟀</span>
+                            <span>連絡電話：0921123456</span>
+                            <span>付款方式：貨到付款</span>
+                            <span>配送方式：7-11 超商取貨 松德門市</span>
+                        </div>
+                        <div class="order_product">
+                            <p class="order_product_title">商品詳情</p>
+                            <table class="order-info">
+                                <thead>
+                                    <tr class="order-info-row1">
+                                        <th width="500px">商品訊息</th>
+                                        <th width="160px">售價</th>
+                                        <th width="140px">數量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mypro_outer">
+                                            <div class="mypro">
+                                                <img src="./images/myCollection/Relaxed.svg" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>Freak’s store Relax Fit 845762</li>
+                                                <li>尺寸：L</li>
+                                                <li>顏色：灰</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>
+                                            <div class="mypro_detail">NT$ 990</div>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <div class="mypro_detail">1</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mypro_outer">
+                                            <div class="mypro">
+                                                <img src="./images/myCollection/Pigment.svg" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>Nautica Pigment Dyed Tee 844752</li>
+                                                <li>尺寸：L</li>
+                                                <li>顏色：黑</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>
+                                            <div class="mypro_detail">NT$ 1290</div>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <div class="mypro_detail">1</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="order_detail">
+                            <p>統一發票開立方式</p>
+                            <span>發票種類：捐贈</span>
+                        </div>
+                        <div class="order_price">
+                            <div class="order_price_title">
+                                <span>商品總額：</span>
+                                <span>優惠折扣：</span>
+                                <span>運費結算：</span>
+                                <span>訂單總金額：</span>
+                            </div>
+                            <div class="order_price_price">
+                                <span>2,280</span>
+                                <span>516</span>
+                                <span>0</span>
+                                <span class="NT1301">1,764</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headLine">退換貨申請</div>
+                    <div class="mysearchbar">
+                        <div class="mysearchbar_row">
+                            <div class="mysearchbar_deliver">
+                                <select name="byDeliver" id="byDeliver">
+                                    <option value="">配送方式</option>
+                                    <option value="宅配到府">宅配到府</option>
+                                    <option value="超商取貨_7-11">7-11 超商取貨</option>
+                                    <option value="超商取貨_全家">全家 超商取貨</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_year">
+                                <select name="byYear" id="byYear">
+                                    <option value="2023" selected>2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                            <div class="mysearchbar_momth">
+                                <select name="byMonth" id="byMonth">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mysearchbar_btns">
+                            <div class="mysearchbar_sum">
+                                <input type="submit" value="查詢">
+                            </div>
+                            <div class="mysearchbar_all">
+                                <button class="collectCheck" onclick="dispalyInfo3()">全部顯示</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myreturn" id="info3">
+                        <div class="myreturnImg">
+                            <img src="./images/icon/order_gray.svg" alt="">
+                        </div>
+                        <p>無退換貨申請紀錄</p>
+                        <span class="myreturnText2">確認您退換貨的申請日期，或點選全部顯示</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ********** 新文件內容置於該線以上 ********** -->
+    <!------------ footer ------------>
+    <footer>
+        <div class="footer_div">
+            <ul class="footer_icon">
+                <li><a href="https://zh-tw.facebook.com/" target="_blank"><img src="./images/community/FB_gray.svg"
+                            onmouseover="this.src='./images/community/FB_blue.svg';"
+                            onmouseout="this.src='./images/community/FB_gray.svg';" alt=""></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/community/IG_gray.svg"
+                            onmouseover="this.src='./images/community/IG_blue.svg';"
+                            onmouseout="this.src='./images/community/IG_gray.svg';" alt=""></a></li>
+                <li><a href="https://line.me/en/" target="_blank"><img src="./images/community/LINE_gray.svg"
+                            onmouseover="this.src='./images/community/LINE_blue.svg';"
+                            onmouseout="this.src='./images/community/LINE_gray.svg';" alt=""></a></li>
+            </ul>
+            <div class="footer_menu_outer">
+                <ul class="footer_menu">
+                    <li class="footer_menu_li">
+                        <a class="footer_menu1" href="faqterms.html">FAQ</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu2" href="privacyterms.html">隱私權政策</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu3" href="serviceterms.html">服務條款</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="contactterms.html">聯絡我們</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="#">訂閱電子報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Trend Trekker. All Rights Reserved.</p>
+            </div>
+            <div id="gotocomment" onclick="showgotocomment()">
+                <div class="gotocommentbtn">
+                    <img src="./images/comment/comment_gray.svg" alt="">
+                </div>
+                <div class="remaining" id="remaining">
+                    <img src="./images/comment/remind2.svg" alt="">
+                </div>
+            </div>
+            <div id="gotop">
+                <div class="dotopbtn">
+                    <img src="./images/gototop/gototop_gray.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="gotocommentBlack">
+        <div id="gotocommentWhite">
+            <div class="gotocomment_close">
+                <button onclick="closegotocomment()"><img src="./images/icon/cross_gray.svg" alt=""></button>
+            </div>
+            <div class="gotocomment_inner">
+                <div class="gotocommentTitle" id="gotocommentTitle">
+                    您尚有 (2) 件商品未評論
+                    <p>　</p>
+                </div>
+                <form class="gotocommentA" id="myForm" method="post">
+                    <div class="gotocommentA_title">
+                        <span>評論區資料</span>
+                    </div>
+                    <div class="gotocommentA_name">
+                        <label for="username">※ 暱稱</label>
+                        <input type="text" name="username" id="username" title="請輸入姓名" placeholder="小蟀超帥" required>
+                    </div>
+                    <div class="gotocommentA_height">
+                        <label for="userheight">※ 身高</label>
+                        <input type="text" name="userheight" id="userheight" title="請輸入身高" placeholder="180" required>
+                    </div>
+                    <div class="gotocommentA_weight">
+                        <label for="userweight">※ 體重</label>
+                        <input type="text" name="userweight" id="userweight" title="請輸入體重" placeholder="69" required>
+                    </div>
+                    <div class="gotocommentA_btn">
+                        <input type="submit" id="saveset" onclick="savesetting()" value="儲存設定">
+                    </div>
+                </form>
+                <div class="gotocommentB" id="gotocommentB1">
+                    <div class="gotocommentB_title">
+                        <span>發表評論</span>
+                    </div>
+                    <div class="gotocommentB_info">
+                        <div class="gotocommentB_img">
+                            <img src="./images/productslide/01.JPG" alt="">
+                        </div>
+                        <div class="gotocommentB_text">
+                            <span>Nautica Arch Logo SS Tee 455359</span>
+                            <span>顏色：白</span>
+                            <span>尺寸：M</span>
+                        </div>
+                    </div>
+                    <div class="gotocommentB_star">
+                        <span>※ 推薦指數</span>
+                        <div id="commentStar">
+                            <div id="starA1" onmouseenter="stara1()" onclick="stara1red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starA2" onmouseenter="stara2()" onclick="stara2red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starA3" onmouseenter="stara3()" onclick="stara3red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starA4" onmouseenter="stara4()" onclick="stara4red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starA5" onmouseenter="stara5()" onclick="stara5red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="commentWrite">
+                        <span>※ 推薦指數</span>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="請寫下使用後感想，感謝您寶貴的意見。"></textarea>
+                    </div>
+                    <div class="gotocommentB_btn">
+                        <button class="sendout" onclick="sentgotocomment1()">送出評論</button>
+                    </div>
+                </div>
+                <div class="gotocommentB" id="gotocommentB2">
+                    <div class="gotocommentB_title">
+                        <span>發表評論</span>
+                    </div>
+                    <div class="gotocommentB_info">
+                        <div class="gotocommentB_img">
+                            <img src="./images/productslide/04.JPG" alt="">
+                        </div>
+                        <div class="gotocommentB_text">
+                            <span>Nautica Arch Logo SS Tee 455359</span>
+                            <span>顏色：黃</span>
+                            <span>尺寸：L</span>
+                        </div>
+                    </div>
+                    <div class="gotocommentB_star">
+                        <span>※ 推薦指數</span>
+                        <div id="commentStar">
+                            <div id="starB1" onmouseenter="starb1()" onclick="starb1red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starB2" onmouseenter="starb2()" onclick="starb2red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starB3" onmouseenter="starb3()" onclick="starb3red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starB4" onmouseenter="starb4()" onclick="starb4red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                            <div id="starB5" onmouseenter="starb5()" onclick="starb5red()">
+                                <img src="./images/comment/starGray.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="commentWrite">
+                        <span>※ 推薦指數</span>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="請寫下使用後感想，感謝您寶貴的意見。"></textarea>
+                    </div>
+                    <div class="gotocommentB_btn">
+                        <button class="sendout" onclick="sentgotocomment2()">送出評論</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gotocommentBlack2">
+        <div id="getcoupon1">
+            <div class="getcouponclose">
+                <button onclick="closecoupon1()"><img src="./images/icon/cross_gray.svg" alt=""></button>
+            </div>
+            <div class="coupon999">
+                <img src="./images/comment/comment_car999.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="gotocommentBlack3">
+        <div id="getcoupon2">
+            <div class="getcouponclose">
+                <button onclick="closecoupon2()"><img src="./images/icon/cross_gray.svg" alt=""></button>
+            </div>
+            <div class="coupon10">
+                <img src="./images/comment/comment_10OFF.svg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery Core 3.7.0 原始碼，一定要放在最上面，先被執行 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- jquery-smoove  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+<!-- 自己的 navbar.js 必須放在後面  -->
+<script src="./js/navbar.js"></script>
+<script src="./js/memberC.js"></script>
+<script src="./js/gotocomment.js"></script>
+
+</html>

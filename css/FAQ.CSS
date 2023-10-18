@@ -1,0 +1,398 @@
+/* faq區 */
+#faq {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* faq標題區 */
+.faq_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 2vh 0;
+}
+
+.faq_title {
+    text-align: center;
+}
+
+/* 十字按鈕樣式 */
+
+.linebar {
+    display: block;
+    /* 修改sapn行內元素為區塊 */
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: transparent;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 按鈕1樣式 */
+.buyouter {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+
+#buy_content.show {
+    display: block;
+    animation: show 0.3s both;
+}
+
+.faqbotton .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* 按鈕2樣式 */
+.buyouter2 {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton2 {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+#member_content.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+.faqbotton2 .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton2 .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton2.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton2.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* 按鈕3樣式 */
+.buyouter3 {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton3 {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+#pay_content.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+.faqbotton3 .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton3 .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton3.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton3.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* 按鈕4樣式 */
+.buyouter4 {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton4 {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+#refund_content.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+.faqbotton4 .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton4 .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton4.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton4.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* 按鈕5樣式 */
+.buyouter5 {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton5 {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+#return_content.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+.faqbotton5 .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton5 .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton5.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton5.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* 按鈕6樣式 */
+.buyouter6 {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 50px;
+    align-items: center;
+    align-self: center;
+    border: 1px solid #656565;
+}
+
+.faqbotton6 {
+    display: inline-block;
+    /* 自動抓內容(.bar的尺寸) */
+    cursor: pointer;
+    /* 取消button預設樣式 */
+    background-color: transparent;
+    border: none;
+}
+
+#ship_content.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+.faqbotton6 .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+}
+
+.faqbotton6 .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+.faqbotton6.is-active .linebar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.faqbotton6.is-active .linebar:nth-child(2) {
+    transform: translateY(-7px) rotate(135deg);
+}
+
+/* faq選單區 */
+
+/* 選單列表 */
+.faq_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25vh;
+    text-align: center;
+}
+
+.faq_content ul {
+    list-style: none;
+}
+
+.faq_content ul a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 各問題div */
+
+
+/* 各faq內文 */
+#buy_content,
+#member_content,
+#pay_content,
+#refund_content,
+#return_content,
+#ship_content {
+    display: none;
+}
+
+#buy_content ul li,
+#member_content ul li,
+#pay_content ul li,
+#refund_content ul li,
+#return_content ul li,
+#ship_content ul li {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+}
+
+#buy_content ul,
+#member_content ul,
+#pay_content ul,
+#refund_content ul,
+#return_content ul,
+#ship_content ul {
+    padding: 0;
+}
+
+#buy_content,
+#member_content,
+#pay_content,
+#refund_content,
+#return_content,
+#ship_content {
+    margin: 0 auto;
+    width: 600px;
+    background-color: #f7f9fc;
+}
+
+
+
+.manyQ,
+.faq_option {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+
+}
+.faq_option {
+    margin-left: 30px;
+}
+.faqbotton,
+.faqbotton2,
+.faqbotton3,
+.faqbotton4,
+.faqbotton5,
+.faqbotton6 {
+    width: 40px;
+    height: 40px;
+}
+
+.manyQ ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+
+    #buy_content,
+    #member_content,
+    #pay_content,
+    #refund_content,
+    #return_content,
+    #ship_content {
+        width: 340px;
+    }
+
+    .buyouter6,
+    .buyouter5,
+    .buyouter4,
+    .buyouter3,
+    .buyouter2,
+    .buyouter {
+        width: 340px;
+    }
+}

@@ -1,0 +1,436 @@
+/* ---------- 選擇按鍵 ---------- */
+#memberCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.mem {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-bottom: 15vh;
+}
+#memberBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 50px;
+}
+.my {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 17px;
+    height: 70px;
+    width: 200px;
+    color: #656565;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #ededed;
+}
+.my.Info:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Dis:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Ord {
+    color: #000000;
+    border-bottom: 3px solid #656565;
+}
+.my.Fav:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+@media (max-width: 800px) {
+    .my {
+        font-size: 16px;
+        height: 52.5px;
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .my {
+        font-size: 14px;
+        height: 40px;
+        width: 90px;
+    }
+}
+/* ---------- 訂單資訊 ---------- */
+#infoBox {
+    display: flex;
+    justify-content: center;
+}
+.infoInner {
+    display: block;
+}
+.headLine {
+    width: 800px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #003060;
+    margin-top: 70px;
+    font-size: 17px;
+    border-bottom: 2px solid #ededed;
+}
+.mysearchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 800px;
+    height: 80px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.mysearchbar_row {
+    display: flex;
+    justify-content: center;
+}
+#byDeliver,
+#byYear,
+#byMonth {
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.mysearchbar_year {
+    margin: 0 20px;
+}
+.mysearchbar_btns {
+    display: flex;
+    justify-content: center;
+}
+.mysearchbar_sum {
+    margin: 0 20px;
+}
+.mysearchbar_sum input {
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80px;
+    height: 36px;
+    background-color: #3493fb;
+    color: #ffffff;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+.mysearchbar_sum input:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.collectCheck {
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #3493fb;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+.collectCheck:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.yellowbackground {
+    display: flex;
+    flex-direction: column;
+    width: 796px;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: 2px solid #ededed;
+}
+.order_number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 50px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.order_number_inner {
+    margin-left: 30px;
+}
+/* 以下為十字叉叉按鈕 */
+.expandBtn_outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 30px;
+    height: 30px;
+}
+.expandBtn {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #656565;
+    border-radius: 3px;
+    top: calc(50% - 1.5px);
+    left: 0;
+    transition: transform 0.3s ease;
+}
+.expandBtn:hover .line {
+    background-color: #3493fb;
+}
+.line.horizontal {
+    transform: rotate(0deg);
+}
+.line.vertical {
+    transform: rotate(90deg);
+}
+.expandBtn.active .line.horizontal {
+    transform: rotate(45deg);
+    background-color: #3493fb;
+}
+.expandBtn.active .line.vertical {
+    transform: rotate(135deg);
+    background-color: #3493fb;
+}
+/* 以上為十字叉叉按鈕 */
+
+.order_step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    border-bottom: 2px solid #ededed;
+}
+.order_step img {
+    width: 90%;
+}
+.order_product_title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 30px;
+}
+.order-info {
+    width: 100%;
+}
+.order-info-row1 {
+    background-color: #F4F7FE;
+    height: 40px;
+    font-size: 14px;
+}
+.mypro_outer {
+    display: flex;
+    align-items: center;
+}
+.mypro {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+}
+.order_detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ededed;
+}
+.order_product {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ededed;
+}
+.order_detail p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.order_detail span {
+    margin-left: 30px;
+}
+.mypro_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+}
+.order_price_title {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+}
+.order_price_price {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+}
+.NT1301 {
+    color: red;
+    font-weight: bolder;
+}
+.myreturn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 240px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.myreturnImg {
+    margin-bottom: 20px;
+}
+.myreturnImg img {
+    width: 70px;
+    height: 70px;
+}
+.myreturn p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #003060;
+}
+.myreturn span {
+    color: #656565;
+}
+#info1,
+#info2,
+#info3 {
+    display: none;
+}
+#info1Detail,
+#info2Detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.ybgdisplayflex {
+    /* display: flex !important; */
+    max-height: 1000px !important;
+}
+/* ---------- RWD：memberB ---------- */
+@media (max-width: 800px) {
+    .headLine {
+        font-size: 16px;
+        height: 30px;
+        width: 600px;
+    }
+    .mycollect {
+        width: 600px;
+    }
+    .mysearchbar {
+        width: 600px;
+    }
+    .order_number {
+        width: 600px;
+    }
+    .yellowbackground {
+        width: 596px;
+    }
+    .myreturn {
+        width: 600px;
+    }
+    .mypro {
+        width: 85px;
+        height: 85px;
+    }
+}
+@media (max-width: 600px) {
+    .body {
+        font-size: 14px;
+    }
+    .headLine {
+        font-size: 14px;
+        height: 25px;
+        width: 360px;
+        margin: 0;
+        margin-top: 60px;
+    }
+    .mycollect {
+        width: 360px;
+    }
+    .mysearchbar {
+        width: 360px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+    }
+    .order_number {
+        width: 360px;
+    }
+    .yellowbackground {
+        width: 356px;
+    }
+    .order_step {
+        height: 100px;
+    }
+    .order_step img {
+        width: 100%;
+    }
+    .myreturn {
+        width: 360px;
+    }
+    .mypro {
+        margin-left: 10px;
+        width: 75px;
+        height: 75px;
+    }
+    .mypro img {
+        width: 60px;
+        height: 60px;
+    }
+    .mypro_outer ul {
+        padding-left: 10px;
+    }
+    .order_product p {
+        margin-left: 10px;
+    }
+    .order_detail p {
+        margin-left: 10px;
+    }
+    .order_detail span {
+        margin-left: 10px;
+    }
+    .order_number_inner {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .order_price_price {
+        margin-right: 10px;
+    }
+}

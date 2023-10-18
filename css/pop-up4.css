@@ -1,0 +1,143 @@
+/* ---------- 以下為 fooder 區塊 ---------- */
+#sec5 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../images/toyBG/B03.svg");
+    width: 100vw;
+    height: 45vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.footer_div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+.footer_icon {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.footer_menu {
+    align-items: center;
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+.footer_icon li {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+.footer_menu li {
+    list-style-type: none;
+    display: inline;
+    border: 50px;
+    width: 100px;
+}
+.footer_menu li a {
+    padding: 0 10px;
+    color: #656565;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+.footer_menu li a:hover {
+    color: #3493fb;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    height: 25px;
+}
+.copyright p {
+    font-size: 15px;
+    color: #656565;
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+#gotop {
+    display: none;
+    position: fixed;
+    right: 75px;
+    bottom: 25px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+.dotopbtn {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.dotopbtn:hover img {
+    content: url("../images/gototop/gototop_gray.svg");
+}
+@media (max-width: 444px) {
+    footer {
+        height: 120px;
+    }
+    .footer_menu_outer {
+        display: none;
+    }
+}
+/* ---------- 以上為 fooder 區塊 ---------- */
+
+/* ---------- hamburger menu ---------- */
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 120px);
+    background-color: rgba(200, 200, 200, 0.5);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    left: 0px;
+    top: 120px;
+    z-index: 70;
+}
+.hamMenu {
+    display: flex;
+    align-self: center;
+    height: 95px;
+    width: 152px;
+    margin-top: 3vh;
+}
+.hamMenu.back:hover img {
+    content: url("../images/pop-topbar/back_red.svg");
+}
+.hamMenu.home:hover img {
+    content: url("../images/pop-topbar/home_red.svg");
+}
+.hamMenu.about:hover img {
+    content: url("../images/pop-topbar/about_red.svg");
+}
+.hamMenu.flagship:hover img {
+    content: url("../images/pop-topbar/flagship_red.svg");
+}
+.hamMenu.product:hover img {
+    content: url("../images/pop-topbar/product_red.svg");
+}
+.hamburgerMenu {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s, max-width 1s ease-out;
+}
+.show-hamburgerMenu {
+    opacity: 1;
+    max-width: 1000px !important;
+}
+.hideNav {
+    display: none;
+}

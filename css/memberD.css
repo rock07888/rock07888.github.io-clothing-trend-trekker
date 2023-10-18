@@ -1,0 +1,221 @@
+/* ---------- 選擇按鍵 ---------- */
+#memberCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.mem {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-bottom: 40vh;
+}
+#memberBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 50px;
+}
+.my {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 17px;
+    height: 70px;
+    width: 200px;
+    color: #656565;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #ededed;
+}
+.my.Info:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Dis:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Ord:hover {
+    color: #003060;
+    border-bottom: 3px solid #3493fb;
+}
+.my.Fav {
+    color: #000000;
+    border-bottom: 3px solid #656565;
+}
+@media (max-width: 800px) {
+    .my {
+        font-size: 14px;
+        height: 52.5px;
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .my {
+        font-size: 14px;
+        height: 40px;
+        width: 90px;
+    }
+}
+/* ---------- 我的收藏 ---------- */
+#infoBox {
+    display: flex;
+    justify-content: center;
+}
+.infoInner {
+    display: block;
+}
+.headLine {
+    width: 800px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #003060;
+    margin-top: 70px;
+    font-size: 17px;
+    border-bottom: 2px solid #ededed;
+}
+.mycollect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 120px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.mycollectL {
+    display: flex;
+    align-items: center;
+}
+.mycollectR {
+    align-self: flex-start;
+    width: 80px;
+    height: 80px;
+    margin: 0 20px 0 10px;
+}
+.mycollectText {
+    align-self: flex-start;
+}
+.mycollectText p {
+    margin: 0;
+}
+.mycollect590 {
+    font-size: 20px;
+    color: #3493fb;
+}
+.mycollectR {
+    display: block;
+    /* width: 110px;
+    height: 120px;
+    margin: 0; */
+}
+.mycollectFork {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    height: 60px;
+}
+.mycollectDelete {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    background-color: #F4F7FE;
+    border: 0;
+    margin: 15px 15px 0 0;
+}
+.mycollectDelete img {
+    width: 26px;
+    height: 26px;
+}
+.mycollectDelete:hover img {
+    content: url("../images/icon/garbage_blue.svg");
+}
+.mycollectCheck {
+    display: flex;
+    align-items: flex-end;
+    width: 100px;
+    height: 60px;
+}
+.collectCheck {
+    cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    background-color: #3493fb;
+    color: #ffffff;
+    width: 100px;
+    height: 36px;
+    border: 0;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    margin: 0 10px 10px 0;
+}
+.collectCheck:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+.nocollect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 240px;
+    background-color: #F4F7FE;
+    margin-top: 10px;
+}
+.nocollectImg {
+    margin-bottom: 20px;
+}
+.nocollectImg img {
+    width: 70px;
+    height: 70px;
+}
+.nocollect p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #003060;
+}
+.nocollect span {
+    color: #656565;
+}
+.nocollect {
+    display: none;
+}
+/* ---------- RWD：memberB ---------- */
+@media (max-width: 800px) {
+    .body {
+        font-size: 14px;
+    }
+    .headLine {
+        font-size: 14px;
+        height: 30px;
+        width: 600px;
+    }
+    .mycollect {
+        width: 600px;
+    }
+    .nocollect {
+        width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    .headLine {
+        font-size: 14px;
+        height: 25px;
+        width: 360px;
+        margin: 0;
+        margin-top: 60px;
+    }
+    .mycollect {
+        width: 360px;
+    }
+    .nocollect {
+        width: 360px;
+    }
+}

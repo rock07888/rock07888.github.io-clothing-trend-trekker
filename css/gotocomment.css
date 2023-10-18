@@ -1,0 +1,432 @@
+/* ---------- 以下為我要評論按鈕 ---------- */
+#gotocomment {
+    position: fixed;
+    right: 140px;
+    bottom: 25px;
+    z-index: 99;
+    width: 44px;
+    height: 44px;
+    display: none;
+}
+.gotocommentbtn {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.remaining {
+    display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.gotocommentbtn:hover img {
+    content: url("../images/comment/comment_blue.svg");
+}
+/* ---------- 評論區黑色背景模糊 ---------- */
+#gotocommentBlack,
+#gotocommentBlack2,
+#gotocommentBlack3 {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    z-index: 199;
+}
+/* ---------- 評論區本人 ---------- */
+#gotocommentWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 600px;
+    height: 613px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F4F7FE;
+    border-radius: 5px;
+}
+/* 評論區：關閉 */
+.gotocomment_close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 44px;
+    background-color: #F4F7FE;
+    border-radius: 5px 5px 0 0;
+}
+.gotocomment_close button {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+    padding: 3px;
+}
+.gotocomment_close button:hover {
+    border: 2px solid #3493fb;
+}
+.gotocomment_close button:hover img {
+    content: url("../images/icon/cross_blue.svg");
+}
+/* 評論區 Title 區塊：顯示未評論商品數 */
+.gotocommentTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: #3493fb;
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+}
+.gotocomment_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 85%;
+    height: 500px;
+    padding-bottom: 25px;
+    background-color: white;
+}
+/* 評論區 A 區塊：基本資料 */
+.gotocommentA {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 1;
+    width: 90%;
+    height: 250px;
+}
+.gotocommentA_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ededed;
+}
+.gotocommentA_title span {
+    font-size: 17px;
+    color: #003060;
+}
+.gotocommentA_name,
+.gotocommentA_height,
+.gotocommentA_weight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+}
+.gotocommentA_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.gotocommentA_name label,
+.gotocommentA_height label,
+.gotocommentA_weight label {
+    width: 100px;
+}
+.gotocommentA_name input,
+.gotocommentA_height input,
+.gotocommentA_weight input {
+    width: 150px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+#saveset {
+    font-family: "Noto Sans TC", sans-serif;
+    justify-content: center;
+    font-size: 14px;
+    width: 100px;
+    height: 36px;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #3493fb;
+}
+#saveset:hover {
+    background-color: #3493fb;
+    color: #ffffff;
+}
+/* 評論區 B 區塊 */
+.gotocommentB {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 1;
+    width: 90%;
+}
+.gotocommentB_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ededed;
+}
+.gotocommentB_title span {
+    font-size: 17px;
+    color: #003060;
+}
+/* 評論區 B 區塊：資訊 */
+.gotocommentB_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-color: #F4F7FE;
+    margin-top: 25px;
+}
+.gotocommentB_img {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    margin: 5px 10px;
+}
+.gotocommentB_img img {
+    display: block;
+    width: 100%;
+}
+.gotocommentB_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* 評論區 B 區塊：星等 */
+.gotocommentB_star {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+}
+.gotocommentB_star span {
+    width: 100px;
+}
+#commentStar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 100%;
+    margin-right: 2px;
+}
+#starA1,
+#starA2,
+#starA3,
+#starA4,
+#starA5 {
+    cursor: pointer;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+#starB1,
+#starB2,
+#starB3,
+#starB4,
+#starB5 {
+    cursor: pointer;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+#commentStar img {
+    display: block;
+    width: 100%;
+}
+/* 評論區 B 區塊：寫下評論 */
+#commentWrite {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#commentWrite span {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+#commentWrite textarea {
+    resize: none;
+    width: 90%;
+    height: 150px;
+    margin: 0;
+    padding: 20px;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+/* 送出評論 */
+.gotocommentB_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.sendout {
+    font-family: "Noto Sans TC", sans-serif;
+    justify-content: center;
+    font-size: 14px;
+    width: 100px;
+    height: 36px;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #3493fb;
+    color: #ffffff;
+}
+.sendout:hover {
+    background-color: #ffffff;
+    color: #3493fb;
+}
+/* 平時隱藏背景模糊與頻論區塊*/
+#gotocommentBlack {
+    display: none;
+    /* display: block; */
+}
+/* 送出評論後，跳出優惠碼 */
+#getcoupon1,
+#getcoupon2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 194px;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+.getcouponclose {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 44px;
+    background-color: #F4F7FE;
+    border-radius: 5px 5px 0 0;
+}
+.getcouponclose button {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #656565;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+    padding: 3px;
+}
+.getcouponclose button:hover {
+    border: 2px solid #3493fb;
+}
+.getcouponclose button:hover img {
+    content: url("../images/icon/cross_blue.svg");
+}
+.coupon999,
+.coupon10 {
+    display: block;
+    width: 350px;
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+}
+.coupon999 img,
+.coupon10 img {
+    border-radius: 0 0 5px 5px;
+}
+#gotocommentBlack2,
+#gotocommentBlack3 {
+    display: none;
+}
+@media (max-width: 800px) {
+    #gotocommentWhite {
+        width: 550px;
+    }
+}
+@media (max-width: 700px) {
+    #gotocommentWhite {
+        width: 500px;
+    }
+}
+@media (max-width: 600px) {
+    #gotocommentWhite {
+        width: 450px;
+    }
+}
+@media (max-width: 500px) {
+    #gotocommentWhite {
+        width: 400px;
+    }
+    .gotocomment_inner {
+        width: 90%;
+    }
+    .gotocommentA {
+        width: 95%;
+    }
+    .gotocommentB {
+        width: 95%;
+    }
+}
+@media (max-width: 450px) {
+    #gotocommentWhite {
+        width: 350px;
+    }
+    .gotocomment_inner {
+        width: 95%;
+    }
+    .gotocommentA {
+        width: 100%;
+    }
+    .gotocommentB {
+        width: 100%;
+    }
+    .gotocommentA_title span,
+    .gotocommentA_name label,
+    .gotocommentA_height label,
+    .gotocommentA_weight label,
+    .gotocommentB_title span,
+    .gotocommentB_star span,
+    #commentWrite span,
+    #commentWrite textarea {
+        margin-left: 15px;
+    }
+    #saveset,
+    .sendout {
+        margin-right: 15px;
+    }
+}

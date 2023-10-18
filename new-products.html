@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- 網站內容 -->
+    <meta name="description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta name="keywords" content="NAUTICA,BOHRHOO,FREAK'S STORE,PIN SKTBS,穿搭,選貨,潮流服飾">
+    <!-- 社群媒體分享 -->
+    <meta property="og:locale" content="zh-hant-tw" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trend Trekker 潮流服飾代購選貨">
+    <meta property="og:description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta property="og:site_name" content="Trend Trekker 潮流服飾代購選貨">
+    <title>Trend Trekker 潮流服飾代購選貨</title>
+    <script src="https://kit.fontawesome.com/3c90ad92f4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/logo/logo_black.svg" />
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/allproducts.css">
+    <link rel="stylesheet" href="./css/tops.css">
+    <link rel="stylesheet" href="./css/jackets.css">
+    <link rel="stylesheet" href="./css/pants.css">
+    <link rel="stylesheet" href="./css/accessories.css">
+    <link rel="stylesheet" href="./css/hint.css">
+</head>
+
+<body>
+    <header>
+        <!------------ hamburger：灰色玻璃遮罩 ------------>
+        <div class="overlay"></div>
+        <!------------ navbar ------------>
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <div class="marquee">
+                <p>Trend Trekker 週年慶 好禮享不完</p>
+                <p>點選「我要評論」 給予回饋 拿優惠券</p>
+                <p>6/13 ~ 7/13 限量聯名商品獨家販售中！ </p>
+            </div>
+            <div class="topbar">
+                <!-- 左：商標 -->
+                <div class="logo">
+                    <a class="logo-img" href="index.html"><img src="./images/logo/TopbarLogo_blue.svg"
+                            alt="Trend Trekker logo"></a>
+                </div>
+                <!-- 右：功能選單 -->
+                <div class="topbar-row">
+                    <div class="first-row">
+                        <div class="icons">
+                            <form class="searchbar">
+                                <input type="text" placeholder="請輸入關鍵字">
+                                <input type="image" src="./images/icon/search_gray.svg"
+                                    onmouseover="this.src='./images/icon/search_blue.svg';"
+                                    onmouseout="this.src='./images/icon/search_gray.svg';" alt="搜索">
+                            </form>
+                            <a href="sign.html" class="icon_member"><img src="./images/icon/member_gray.svg"
+                                    onmouseover="this.src='./images/icon/member_blue.svg';"
+                                    onmouseout="this.src='./images/icon/member_gray.svg';" alt=""></a>
+                            <a href="memberD.html" class="icon_favorate"><img src="./images/icon/favorate_gray.svg"
+                                    onmouseover="this.src='./images/icon/favorate_blue.svg';"
+                                    onmouseout="this.src='./images/icon/favorate_gray.svg';" alt=""></a>
+                            <a href="cartstep1.html" class="icon_shop"><img src="./images/icon/shop_gray.svg"
+                                    onmouseover="this.src='./images/icon/shop_blue.svg';"
+                                    onmouseout="this.src='./images/icon/shop_gray.svg';" alt=""></a>
+                        </div>
+                        <!-- 漢堡按鈕 -->
+                        <div id="hamburger_outer">
+                            <button class="hamburger">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="second-row">
+                        <div class="topbar-menu">
+                            <ul>
+                                <li><a href="new-products.html">最新商品</a></li>
+                                <li><a href="top-sales.html">銷售排行</a></li>
+                                <li><a href="pop-up.html">快閃活動</a></li>
+                                <li><a href="outfitguide.html">穿搭指南</a></li>
+                                <li><span onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()" id="mp">所有商品
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                                <li><span onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()" id="bc">品牌分類
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="allProduct" onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()">
+            <div class="allProduct_inner">
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'tops.html';"><img
+                            src="./images/allProduct/shirt.svg" alt="Icon">上衣</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'jackets.html';"><img
+                            src="./images/allProduct/jacket.svg" alt="Icon">外套</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'pants.html';"><img
+                            src="./images/allProduct/pants.svg" alt="Icon">褲裝</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'accessories.html';"><img
+                            src="./images/allProduct/accessories.svg" alt="Icon">配件</button>
+                </div>
+            </div>
+        </div>
+        <div id="brandClass" onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()">
+            <div class="brandClass_inner">
+                <div class="brandChoice">
+                    <button class="brand_btn A" onclick="window.location.href = 'pinsktbs.html';"><img
+                            src="./images/brand/PIN_SKTBS.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn B" onclick="window.location.href = 'bohrhoo.html';"><img
+                            src="./images/brand/BOHRHOO.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn C" onclick="window.location.href = 'freak.html';"><img
+                            src="./images/brand/FREAKS_STORE.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn D" onclick="window.location.href = 'nutcia.html';"><img
+                            src="./images/brand/NAUTICA.svg" alt="Icon"></button>
+                </div>
+            </div>
+        </div>
+        <div class="hamburgerMenu">
+            <div class="hamburgerMenu_inner">
+                <div class="HMI0"></div>
+                <div class="HMI1">
+                    <ul>
+                        <li><a href="new-products.html">最新商品</a></li>
+                        <li><a href="top-sales.html">銷售排行</a></li>
+                        <li><a href="pop-up.html">快閃活動</a></li>
+                        <li><a href="outfitguide.html">穿搭指南</a></li>
+                    </ul>
+                </div>
+                <div class="HMI2">
+                    <p>所有商品</p>
+                    <ul>
+                        <li><a href="tops.html">上衣</a></li>
+                        <li><a href="jackets.html">外套</a></li>
+                        <li><a href="pants.html">褲裝</a></li>
+                        <li><a href="accessories.html">配件</a></li>
+                    </ul>
+                </div>
+                <div class="HMI3">
+                    <p>品牌分類</p>
+                    <ul>
+                        <li><a href="pinsktbs.html">PIN SKTBS</a></li>
+                        <li><a href="bohrhoo.html">BOHRHOO</a></li>
+                        <li><a href="freak.html">FREAK'S STORE</a></li>
+                        <li><a href="nutcia.html">NAUTICA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="box_upper"></div>
+        </section>
+    </header>
+    <!-- ********** 新文件內容置於該線以下 ********** -->
+    <section id="productSection1">
+        <div class="productOuter1">
+            <div class="productTitle1">
+                <span class="productTitle1_new">最新商品</span>
+            </div>
+            <div class="productFilter1">
+                <div class="productFilter1-1">
+                    <input type="radio" name="filter" id="filter1" value="rating"><label for="filter1"></label><span
+                        for="rating">依星等排序</span>
+                    <input type="radio" name="filter" id="filter2" value="sales"><label for="filter2"></label><span
+                        for="rating">依銷量排序</span>
+                </div>
+                <div class="productFilter1-2">
+                    <select name="dropdown" id="filter3">
+                        <option value="all">限定尺寸區間</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
+                </div>
+                <div class="productFilter1-3">
+                    <span class="filterNT">價錢( NT$ )</span>
+                    <input type="text" name="price" id="filter4" placeholder="最小金額">
+                    <span>～</span>
+                    <input type="text" name="price" id="filter5" placeholder="最大金額">
+                </div>
+                <div class="productFilter1-4">
+                    <button id="filter6" onclick="applyFilter()"><img src="./images/icon/filter_white.svg"
+                            alt="">套用篩選</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="gridProduct t-n-5A" data-rating="5" data-sales="59" data-price="1780" data-s="s" data-m="m"
+                    data-l="l" onclick="window.location.href='nauticaproductslide.html'">
+                    <span class="tooltip-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目有商品頁</span><div class="gridProductImg t-n-5A">
+                        <a href="nauticaproductslide.html" target="_blank"><img src="./images/products/1-tops-6/NAUTICA/t-n-5A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2023SS Arch Logo S/S Tee</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,780</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：59</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-n-5A" data-rating="5" data-sales="47" data-price="1750" data-s="s" data-m="m"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-n-5A">
+                        <a href="#"><img src="./images/products/2-jackets-6/NAUTICA/j-n-5A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2022AW Oxford BD Shirt “LURK 0.5”</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,750</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：47</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-p-3A" data-rating="5" data-sales="8" data-price="1980" data-s="s" data-m="m"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-p-3A">
+                        <a href="#"><img src="./images/products/2-jackets-6/PIN_SKTBS/j-p-3A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>PIN SKTBS Hallzip Jacket 日系半拉鍊 套頭拉鍊外套</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,980</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：8</span>
+                    </div>
+                </div>
+                <div class="gridProduct a-p-2A" data-rating="5" data-sales="29" data-price="880" data-s="s" data-m="m"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg a-p-2A">
+                        <a href="#"><img src="./images/products/4-accessories-2/PIN_SKTBS/a-p-2A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>PIN SKTBS Golf Cap 刺繡拼接棒球帽</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">880</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：29</span>
+                    </div>
+                </div>
+                <div class="gridProduct t-b-2A" data-rating="5" data-sales="91" data-price="1180" data-s="s" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg t-b-2A">
+                        <a href="#"><img src="./images/products/1-tops-6/BOHRHOO/t-b-2A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>BOHRHOO Rice Grain Stripe Tee</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,180</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、L　月銷量：91</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-b-2A" data-rating="5" data-sales="59" data-price="1780" data-s="s" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-b-2A">
+                        <a href="#"><img src="./images/products/2-jackets-6/BOHRHOO/j-b-2A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>BOHRHOO 輕便防潑水 隱袋風衣外套</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,780</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、L　月銷量：59</span>
+                    </div>
+                </div>
+                <div class="gridProduct p-f-6A" data-rating="5" data-sales="76" data-price="2250" data-s="s" data-m="m"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg p-f-6A">
+                        <a href="#"><img src="./images/products/3-pants-6/FREAK_S/p-f-6A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>FREAK'S STORE 6口袋 寬版 工作褲</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">2,250</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：76</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-f-5A" data-rating="5" data-sales="79" data-price="1180" data-m="m" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-f-5A">
+                        <a href="#"><img src="./images/products/2-jackets-6/FREAK_S/j-f-5A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>FREAK'S STORE 寬版 半開襟 套頭運動衫</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,180</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：M、L　月銷量：79</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-n-3A" data-rating="4" data-sales="76" data-price="1800" data-s="s" data-m="m">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-n-3A">
+                        <a href="#"><img src="./images/products/2-jackets-6/NAUTICA/j-n-3A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2022AW Rip Stop Thinsulate Coach Jacket</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,800</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_4.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M　月銷量：76</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-n-6A" data-rating="5" data-sales="69" data-price="1050" data-m="m" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-n-6A">
+                        <a href="#"><img src="./images/products/2-jackets-6/NAUTICA/j-n-6A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2022AW Oxford BD Shirt “TOO BIG”</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,050</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：M、L　月銷量：69</span>
+                    </div>
+                </div>
+                <div class="gridProduct p-p-5A" data-rating="4" data-sales="28" data-price="2390" data-m="m" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg p-p-5A">
+                        <a href="#"><img src="./images/products/3-pants-6/PIN_SKTBS/p-p-5A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>PIN SKTBS Fleece Cargo Pants 搖粒絨 拼接工作褲</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">2,390</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_4.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：M、L　月銷量：28</span>
+                    </div>
+                </div>
+                <div class="gridProduct p-n-3A" data-rating="4" data-sales="29" data-price="999" data-s="s" data-m="m"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg p-n-3A">
+                        <a href="#"><img src="./images/products/3-pants-6/NAUTICA/p-n-3A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2023SS Nylon Swim Shorts</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">999</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_4.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、M、L　月銷量：29</span>
+                    </div>
+                </div>
+                <div class="gridProduct t-p-3A" data-rating="4" data-sales="65" data-price="1080" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg t-p-3A">
+                        <a href="#"><img src="./images/products/1-tops-6/PIN_SKTBS/t-p-3A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>PIN SKTBS Stripe Tee</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,080</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_4.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：L　月銷量：65</span>
+                    </div>
+                </div>
+                <div class="gridProduct a-n-1A" data-rating="5" data-sales="28" data-price="1150" data-m="m" data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg a-n-1A">
+                        <a href="#"><img src="./images/products/4-accessories-2/NAUTICA/a-n-1A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2022AW 3Way Rib Knit Beanie</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,150</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：M、L　月銷量：28</span>
+                    </div>
+                </div>
+                <div class="gridProduct j-p-5A" data-rating="5" data-sales="101" data-price="2880" data-s="s"
+                    data-l="l">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg j-p-5A">
+                        <a href="#"><img src="./images/products/2-jackets-6/PIN_SKTBS/j-p-5A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>PIN SKTBS Madras Shirts 馬德拉斯藍格紋 襯衫外套</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">2,880</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_5.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：S、L　月銷量：101</span>
+                    </div>
+                </div>
+                <div class="gridProduct t-n-6A" data-rating="3" data-sales="99" data-price="1650" data-m="m">
+                    <span class="hint-text"><i class="fa-solid fa-triangle-exclamation"></i> 提示：<br>本項目無商品頁</span><div class="gridProductImg t-n-6A">
+                        <a href="#"><img src="./images/products/1-tops-6/NAUTICA/t-n-6A.JPG" alt=""></a>
+                    </div>
+                    <div class="gridProductName">
+                        <span>NAUTICA 2023SS Panel Border S/S Pocket Tee</span>
+                    </div>
+                    <div class="gridProductPrice">
+                        <span>NT$</span><span class="priceNum">1,650</span>
+                    </div>
+                    <div class="gridProductStar">
+                        <img src="./images/icon/star_yellow_3.svg" alt="">
+                    </div>
+                    <div class="gridProductSales">
+                        <span>尺寸：M　月銷量：99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ********** 新文件內容置於該線以上 ********** -->
+    <!------------ footer ------------>
+    <footer>
+        <div class="footer_div">
+            <ul class="footer_icon">
+                <li><a href="https://zh-tw.facebook.com/" target="_blank"><img src="./images/community/FB_gray.svg"
+                            onmouseover="this.src='./images/community/FB_blue.svg';"
+                            onmouseout="this.src='./images/community/FB_gray.svg';" alt=""></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/community/IG_gray.svg"
+                            onmouseover="this.src='./images/community/IG_blue.svg';"
+                            onmouseout="this.src='./images/community/IG_gray.svg';" alt=""></a></li>
+                <li><a href="https://line.me/en/" target="_blank"><img src="./images/community/LINE_gray.svg"
+                            onmouseover="this.src='./images/community/LINE_blue.svg';"
+                            onmouseout="this.src='./images/community/LINE_gray.svg';" alt=""></a></li>
+            </ul>
+            <div class="footer_menu_outer">
+                <ul class="footer_menu">
+                    <li class="footer_menu_li">
+                        <a class="footer_menu1" href="faqterms.html">FAQ</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu2" href="privacyterms.html">隱私權政策</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu3" href="serviceterms.html">服務條款</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="contactterms.html">聯絡我們</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="#">訂閱電子報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Trend Trekker. All Rights Reserved.</p>
+            </div>
+            <div id="gotop">
+                <div class="dotopbtn">
+                    <img src="./images/gototop/gototop_gray.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- jQuery Core 3.7.0 原始碼，一定要放在最上面，先被執行 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- jquery-smoove  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+<!-- 自己的 navbar.js 必須放在後面  -->
+<script src="./js/navbar.js"></script>
+<script src="./js/allproducts.js"></script>
+
+</html>

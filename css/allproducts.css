@@ -1,0 +1,550 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+#productSection1 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.productOuter1 {
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+    margin: 10vh 0;
+    background-color: #ffffff;
+}
+.productTitle1_new {
+    font-size: 16px;
+}
+.productTitle1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.productTitle1 span {
+    margin-left: 30px;
+}
+.productFilter1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(245, 245, 255, 0.4);
+    margin-bottom: 5vh;
+}
+/* 篩選器 */
+.productFilter1-1 {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+}
+.productFilter1 input[type="radio"] {
+    display: none;
+}
+.productFilter1 input[type="radio"] + label {
+    display: inline-block;
+    border: 0.5px solid #656565;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.productFilter1-1 span {
+    margin: 0 20px;
+}
+.productFilter1 input[type="radio"]:checked + label {
+    background-color: #3493fb;
+}
+.productFilter1-2 {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+#filter3 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    padding: 0 20px;
+    color: #656565;
+    background-color: #ffffff;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+}
+.productFilter1-3 {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+.productFilter1-3 input::placeholder {
+    text-align: center;
+    vertical-align: middle;
+}
+#filter4,
+#filter5 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 70px;
+    height: 28px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: 0.5px solid #656565;
+    border-radius: 3px;
+    margin: 0 15px;
+}
+/* 篩選器送出 */
+.productFilter1-4 {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+#filter6 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    width: 112px;
+    height: 36px;
+    color: #ffffff;
+    background-color: #3493fb;
+    border: 2px solid #3493fb;
+    border-radius: 3px;
+}
+#filter6:hover {
+    color: #3493fb;
+    background-color: #ffffff;
+}
+#filter6 img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+#filter6:hover img {
+    content: url("../images/icon/filter_blue.svg");
+}
+/* 商品區 */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 初始佈局，一列有4件商品 */
+    grid-gap: 10px; /* 商品間的間隔 */
+}
+@keyframes colorChange2 {
+    0% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(200, 200, 219, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(240, 240, 255, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(200, 200, 219, 0.45) 100%
+        );
+    }
+
+    10% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(239, 239, 255, 0.45) 0%,
+            rgba(200, 200, 219, 0.45) 10%,
+            rgba(239, 239, 255, 0.45) 20%,
+            rgba(221, 221, 239, 0.45) 30%,
+            rgba(207, 207, 225, 0.45) 40%,
+            rgba(220, 220, 238, 0.45) 50%,
+            rgba(240, 240, 255, 0.45) 60%,
+            rgba(220, 220, 238, 0.45) 70%,
+            rgba(207, 207, 225, 0.45) 80%,
+            rgba(221, 221, 239, 0.45) 90%,
+            rgba(239, 239, 255, 0.45) 100%
+        );
+    }
+
+    20% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(221, 221, 239, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(200, 200, 219, 0.45) 20%,
+            rgba(239, 239, 255, 0.45) 30%,
+            rgba(221, 221, 239, 0.45) 40%,
+            rgba(207, 207, 225, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(240, 240, 255, 0.45) 70%,
+            rgba(220, 220, 238, 0.45) 80%,
+            rgba(207, 207, 225, 0.45) 90%,
+            rgba(221, 221, 239, 0.45) 100%
+        );
+    }
+
+    30% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(207, 207, 225, 0.45) 0%,
+            rgba(221, 221, 239, 0.45) 10%,
+            rgba(239, 239, 255, 0.45) 20%,
+            rgba(200, 200, 219, 0.45) 30%,
+            rgba(239, 239, 255, 0.45) 40%,
+            rgba(221, 221, 239, 0.45) 50%,
+            rgba(207, 207, 225, 0.45) 60%,
+            rgba(220, 220, 238, 0.45) 70%,
+            rgba(240, 240, 255, 0.45) 80%,
+            rgba(220, 220, 238, 0.45) 90%,
+            rgba(207, 207, 225, 0.45) 100%
+        );
+    }
+
+    40% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(220, 220, 238, 0.45) 0%,
+            rgba(207, 207, 225, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(239, 239, 255, 0.45) 30%,
+            rgba(200, 200, 219, 0.45) 40%,
+            rgba(239, 239, 255, 0.45) 50%,
+            rgba(221, 221, 239, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(220, 220, 238, 0.45) 80%,
+            rgba(240, 240, 255, 0.45) 90%,
+            rgba(220, 220, 238, 0.45) 100%
+        );
+    }
+
+    50% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(240, 240, 255, 0.45) 0%,
+            rgba(220, 220, 238, 0.45) 10%,
+            rgba(207, 207, 225, 0.45) 20%,
+            rgba(221, 221, 239, 0.45) 30%,
+            rgba(239, 239, 255, 0.45) 40%,
+            rgba(200, 200, 219, 0.45) 50%,
+            rgba(239, 239, 255, 0.45) 60%,
+            rgba(221, 221, 239, 0.45) 70%,
+            rgba(207, 207, 225, 0.45) 80%,
+            rgba(220, 220, 238, 0.45) 90%,
+            rgba(240, 240, 255, 0.45) 100%
+        );
+    }
+
+    60% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(220, 220, 238, 0.45) 0%,
+            rgba(240, 240, 255, 0.45) 10%,
+            rgba(220, 220, 238, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(221, 221, 239, 0.45) 40%,
+            rgba(239, 239, 255, 0.45) 50%,
+            rgba(200, 200, 219, 0.45) 60%,
+            rgba(239, 239, 255, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(207, 207, 225, 0.45) 90%,
+            rgba(220, 220, 238, 0.45) 100%
+        );
+    }
+
+    70% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(207, 207, 225, 0.45) 0%,
+            rgba(220, 220, 238, 0.45) 10%,
+            rgba(240, 240, 255, 0.45) 20%,
+            rgba(220, 220, 238, 0.45) 30%,
+            rgba(207, 207, 225, 0.45) 40%,
+            rgba(221, 221, 239, 0.45) 50%,
+            rgba(239, 239, 255, 0.45) 60%,
+            rgba(200, 200, 219, 0.45) 70%,
+            rgba(239, 239, 255, 0.45) 80%,
+            rgba(221, 221, 239, 0.45) 90%,
+            rgba(207, 207, 225, 0.45) 100%
+        );
+    }
+
+    80% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(221, 221, 239, 0.45) 0%,
+            rgba(207, 207, 225, 0.45) 10%,
+            rgba(220, 220, 238, 0.45) 20%,
+            rgba(240, 240, 255, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(207, 207, 225, 0.45) 50%,
+            rgba(221, 221, 239, 0.45) 60%,
+            rgba(239, 239, 255, 0.45) 70%,
+            rgba(200, 200, 219, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(221, 221, 239, 0.45) 100%
+        );
+    }
+
+    90% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(239, 239, 255, 0.45) 0%,
+            rgba(221, 221, 239, 0.45) 10%,
+            rgba(207, 207, 225, 0.45) 20%,
+            rgba(220, 220, 238, 0.45) 30%,
+            rgba(240, 240, 255, 0.45) 40%,
+            rgba(220, 220, 238, 0.45) 50%,
+            rgba(207, 207, 225, 0.45) 60%,
+            rgba(221, 221, 239, 0.45) 70%,
+            rgba(239, 239, 255, 0.45) 80%,
+            rgba(200, 200, 219, 0.45) 90%,
+            rgba(239, 239, 255, 0.45) 100%
+        );
+    }
+
+    100% {
+        background-image: linear-gradient(
+            to top left,
+            rgba(200, 200, 219, 0.45) 0%,
+            rgba(239, 239, 255, 0.45) 10%,
+            rgba(221, 221, 239, 0.45) 20%,
+            rgba(207, 207, 225, 0.45) 30%,
+            rgba(220, 220, 238, 0.45) 40%,
+            rgba(240, 240, 255, 0.45) 50%,
+            rgba(220, 220, 238, 0.45) 60%,
+            rgba(207, 207, 225, 0.45) 70%,
+            rgba(221, 221, 239, 0.45) 80%,
+            rgba(239, 239, 255, 0.45) 90%,
+            rgba(200, 200, 219, 0.45) 100%
+        );
+    }
+}
+.gridProduct {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    animation: colorChange2 8s infinite;
+    transition: background-image 100s ease;
+    /* 商品樣式設定 */
+}
+.gridProductImg,
+.gridProductName,
+.gridProductPrice,
+.gridProductStar,
+.gridProductSales {
+    width: 80%;
+    align-self: center;
+}
+.gridProductImg {
+    margin-top: 20px;
+}
+.gridProductImg img {
+    width: 200px;
+    height: 210px;
+    margin: 0 auto;
+}
+.gridProductName {
+    font-size: 14px;
+    height: 40px;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gridProductPrice {
+    font-size: 14px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.priceNum {
+    margin: 0 10px;
+    font-size: 16px;
+    font-size: large;
+    color: #3493fb;
+}
+.gridProductStar {
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+.gridProductStar img {
+    width: 130px;
+    height: 24px;
+}
+.gridProductSales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 24px;
+    font-size: 13px;
+    color: #656565;
+}
+
+/* RWD：product1 */
+@media (max-width: 1200px) {
+    .productOuter1 {
+        width: 1000px;
+    }
+    .product-container {
+        width: 1000px;
+    }
+    .gridProductImg img {
+        width: 190px;
+        height: 200px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 190px;
+    }
+}
+@media (max-width: 1100px) {
+    .productOuter1 {
+        width: 900px;
+    }
+    .product-container {
+        width: 900px;
+    }
+    .productFilter1 {
+        flex-direction: column;
+        align-items: end;
+    }
+    .gridProductImg img {
+        width: 180px;
+        height: 190px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 180px;
+    }
+}
+@media (max-width: 1000px) {
+    .productOuter1 {
+        width: 800px;
+    }
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 800px;
+    }
+    .gridProductImg img {
+        width: 200px;
+        height: 210px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 200px;
+    }
+}
+@media (max-width: 900px) {
+    .productOuter1 {
+        width: 700px;
+    }
+    .product-container {
+        width: 700px;
+    }
+    .gridProductImg img {
+        width: 170px;
+        height: 180px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 170px;
+    }
+}
+@media (max-width: 800px) {
+    .productOuter1 {
+        width: 500px;
+    }
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 500px;
+    }
+    .gridProductImg img {
+        width: 200px;
+        height: 210px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 200px;
+    }
+}
+@media (max-width: 600px) {
+    .productOuter1 {
+        width: 450px;
+    }
+    .product-container {
+        width: 450px;
+    }
+    .gridProductImg img {
+        width: 180px;
+        height: 190px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 180px;
+    }
+}
+@media (max-width: 500px) {
+    .productOuter1 {
+        width: 300px;
+    }
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 300px;
+    }
+    .filterNT {
+        display: none;
+    }
+    .gridProductImg img {
+        width: 240px;
+        height: 250px;
+    }
+    .gridProductImg,
+    .gridProductName,
+    .gridProductPrice,
+    .gridProductStar,
+    .gridProductSales {
+        width: 240px;
+    }
+}
+.gridProduct.t-n-5A {
+    border: 1px solid #3493fb;
+}
+/* 用於尺寸篩選器：隐藏div區塊 */
+.hide {
+    display: none;
+}

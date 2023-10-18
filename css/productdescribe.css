@@ -1,0 +1,364 @@
+/* 商品介紹，商品評論，付款與運送 */
+
+
+body {
+  font-size: 14px;
+}
+
+#dbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 10vh;
+  margin: 0 auto;
+}
+
+.descop1,
+.descop2,
+.descop3 {
+  width: 100%;
+}
+
+/* 三個選項的樣式 */
+.descbar a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  padding: 10px 0 0 10px;
+}
+
+.descbar-1 {
+  border-bottom: 4px solid #3493FB;
+}
+
+.descbar-2,
+.descbar-3 {
+  border-bottom: 4px solid #ededed;
+}
+
+/* 選項點擊時 */
+.descbar .descbar-1:active,
+.descbar .descbar-2:active,
+.descbar .descbar-3:active {
+  border-bottom: 4px solid #3493FB;
+}
+
+#introduce {
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: .1rem;
+
+}
+
+
+
+
+.prodcut-introduce-detail {
+  width: 801px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+/* 商品評論 */
+#review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#review_outer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 250px;
+}
+
+/* 評論區底線 */
+.star_point {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score_div {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* 評分與分布樣式 */
+.score_div,
+.distributed_div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.review_score {
+
+  margin-top: 3px;
+  color: #7a7a7a;
+
+}
+
+.score_div img {
+  margin-left: 15px;
+}
+
+/* 分布區圖片樣式 */
+.distributed_picture {
+  margin-top: 15px;
+  margin-left: 16px;
+}
+
+.bar_chart {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.bar_chart_quantity {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+/* 排序按鈕樣式 */
+.rtfilter {
+  margin-left: 20px;
+}
+
+.reviewfilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.reviewfilter p {
+  margin-left: 10px;
+}
+
+.reviewfilter input[type="radio"] {
+  display: none;
+}
+
+.reviewfilter input[type="radio"]+label {
+  display: inline-block;
+  border: 2px solid #656565;
+  border-radius: 15px;
+  width: 15px;
+  height: 15px;
+  margin-left: 12px;
+}
+
+.reviewfilter input[type="radio"]:checked+label {
+  background-color: #3493fb;
+}
+
+/* 篩選器外框div */
+.product_review_filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+/* 篩選器內層div */
+.filter_point_time {
+  height: 50px;
+  line-height: 50px;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  display: flex;
+
+}
+
+.rating_time_outer {
+  margin-top: 16px;
+}
+
+.rating_time_outer input[type="radio"] {
+
+  appearance: none;
+}
+
+.rating_time_outer input[type="radio"]+label {
+  display: inline-block;
+  border: 2px solid #656565;
+  border-radius: 15px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.rating_time_outer input[type="radio"]:checked+label {
+  background-color: #3493fb;
+}
+
+/* 身高篩選 */
+#height_filter_dropdown {
+  border-radius: 3px;
+  width: 160px;
+  height: 30px;
+  margin: 8px 10px;
+  padding: 0 25px;
+}
+
+/* 體重篩選 */
+#weight_filter_dropdown {
+  border-radius: 3px;
+  width: 150px;
+  height: 30px;
+  margin: 8px 10px;
+  padding: 0 30px;
+}
+
+/* 評分與時間篩選 */
+#rating_filter_dropdown,
+#time_filter_dropdown {
+  border-radius: 3px;
+  width: 120px;
+  height: 30px;
+  margin: 8px 10px;
+  padding: 0 6px;
+  text-align: center;
+}
+
+/* 點選的排序顯示各自的篩選條件 */
+#rating_filter:checked~#rating_filter_dropdown,
+#time_filter:checked~#time_filter_dropdown {
+  display: block;
+}
+
+/* 將評分篩選與時間篩選條件設為不顯示 */
+#rating_filter_dropdown,
+#time_filter_dropdown {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+/* 顧客評論 */
+.customer_review {
+  margin-top: 10px;
+  width: 100%;
+  display: grid;
+  /* 初始佈局，一列有4件商品 */
+  grid-template-rows: repeat(1, 1fr);
+  justify-content: center;
+
+}
+
+.review_example {
+
+  border-bottom: 1px solid #7a7a7a;
+}
+
+.customer {
+  display: flex;
+}
+
+.customer img {
+  margin-left: 470px;
+}
+
+/* 評論時間 */
+.review-dateA {
+  height: 30px;
+  padding-left: 760px;
+}
+
+.review-dateB {
+  height: 30px;
+  padding-left: 740px;
+}
+
+/* 付款與運送 */
+#payment {
+  width: 100%;
+}
+.detail_title{
+  align-self: center;
+}
+.detail_title,
+.payandship_title,
+.review_title {
+  text-align: center;
+  text-indent: 1.5em;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+
+}
+
+.payandshipframe {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.ship {
+  display: inline-block;
+  padding-right: 10%;
+  text-align: center;
+}
+
+.pay {
+  padding-left: 10%;
+}
+
+.ship h3,
+.pay h3 {
+  text-align: center
+}
+
+.payandshipframe ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 4vh;
+
+}
+
+.sfbtn {
+  display: flex;
+  align-items: center;
+}
+
+.sfbtn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.sfbtn p {
+  margin-right: 10px;
+}
