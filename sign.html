@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- 網站內容 -->
+    <meta name="description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta name="keywords" content="NAUTICA,BOHRHOO,FREAK'S STORE,PIN SKTBS,穿搭,選貨,潮流服飾">
+    <!-- 社群媒體分享 -->
+    <meta property="og:locale" content="zh-hant-tw" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trend Trekker 潮流服飾代購選貨">
+    <meta property="og:description"
+        content="Trend Trekker 提供海外代購,襯衫,配件,衛衣,褲裝,外套等潮流服飾。讓你無須出國，解決穿搭的困擾，節省搭配的時間，並提供本島宅配及超商取貨的服務。給予商品評論，還能享有運費與商品折扣，讓你隨時享受時尚。">
+    <meta property="og:site_name" content="Trend Trekker 潮流服飾代購選貨">
+    <title>Trend Trekker 潮流服飾代購選貨</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <script src="https://kit.fontawesome.com/3c90ad92f4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/logo/logo_black.svg" />
+</head>
+
+<body>
+    <header>
+        <!------------ hamburger：灰色玻璃遮罩 ------------>
+        <div class="overlay"></div>
+        <!------------ navbar ------------>
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <div class="marquee">
+                <p>Trend Trekker 週年慶 好禮享不完</p>
+                <p>點選「我要評論」 給予回饋 拿優惠券</p>
+                <p>6/13 ~ 7/13 限量聯名商品獨家販售中！ </p>
+            </div>
+            <div class="topbar">
+                <!-- 左：商標 -->
+                <div class="logo">
+                    <a class="logo-img" href="index.html"><img src="./images/logo/TopbarLogo_blue.svg"
+                            alt="Trend Trekker logo"></a>
+                </div>
+                <!-- 右：功能選單 -->
+                <div class="topbar-row">
+                    <div class="first-row">
+                        <div class="icons">
+                            <form class="searchbar">
+                                <input type="text" placeholder="請輸入關鍵字">
+                                <input type="image" src="./images/icon/search_gray.svg"
+                                    onmouseover="this.src='./images/icon/search_blue.svg';"
+                                    onmouseout="this.src='./images/icon/search_gray.svg';" alt="搜索">
+                            </form>
+                            <a href="sign.html" class="icon_member"><img src="./images/icon/member_gray.svg"
+                                    onmouseover="this.src='./images/icon/member_blue.svg';"
+                                    onmouseout="this.src='./images/icon/member_gray.svg';" alt=""></a>
+                            <a href="memberD.html" class="icon_favorate"><img src="./images/icon/favorate_gray.svg"
+                                    onmouseover="this.src='./images/icon/favorate_blue.svg';"
+                                    onmouseout="this.src='./images/icon/favorate_gray.svg';" alt=""></a>
+                            <a href="cartstep1.html" class="icon_shop"><img src="./images/icon/shop_gray.svg"
+                                    onmouseover="this.src='./images/icon/shop_blue.svg';"
+                                    onmouseout="this.src='./images/icon/shop_gray.svg';" alt=""></a>
+                        </div>
+                        <!-- 漢堡按鈕 -->
+                        <div id="hamburger_outer">
+                            <button class="hamburger">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="second-row">
+                        <div class="topbar-menu">
+                            <ul>
+                                <li><a href="new-products.html">最新商品</a></li>
+                                <li><a href="top-sales.html">銷售排行</a></li>
+                                <li><a href="pop-up.html">快閃活動</a></li>
+                                <li><a href="outfitguide.html">穿搭指南</a></li>
+                                <li><span onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()" id="mp">所有商品
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                                <li><span onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()" id="bc">品牌分類
+                                        <i class="fa-solid fa-chevron-down"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="allProduct" onmouseenter="showAllproduct()" onmouseleave="hideAllproduct()">
+            <div class="allProduct_inner">
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'tops.html';"><img
+                            src="./images/allProduct/shirt.svg" alt="Icon">上衣</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'jackets.html';"><img
+                            src="./images/allProduct/jacket.svg" alt="Icon">外套</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'pants.html';"><img
+                            src="./images/allProduct/pants.svg" alt="Icon">褲裝</button>
+                </div>
+                <div class="productChoice">
+                    <button class="product_btn" onclick="window.location.href = 'accessories.html';"><img
+                            src="./images/allProduct/accessories.svg" alt="Icon">配件</button>
+                </div>
+            </div>
+        </div>
+        <div id="brandClass" onmouseenter="showBrandclass()" onmouseleave="hideBrandclass()">
+            <div class="brandClass_inner">
+                <div class="brandChoice">
+                    <button class="brand_btn A" onclick="window.location.href = 'pinsktbs.html';"><img
+                            src="./images/brand/PIN_SKTBS.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn B" onclick="window.location.href = 'bohrhoo.html';"><img
+                            src="./images/brand/BOHRHOO.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn C" onclick="window.location.href = 'freak.html';"><img
+                            src="./images/brand/FREAKS_STORE.svg" alt="Icon"></button>
+                </div>
+                <div class="brandChoice">
+                    <button class="brand_btn D" onclick="window.location.href = 'nutcia.html';"><img
+                            src="./images/brand/NAUTICA.svg" alt="Icon"></button>
+                </div>
+            </div>
+        </div>
+        <div class="hamburgerMenu">
+            <div class="hamburgerMenu_inner">
+                <div class="HMI0"></div>
+                <div class="HMI1">
+                    <ul>
+                        <li><a href="new-products.html">最新商品</a></li>
+                        <li><a href="top-sales.html">銷售排行</a></li>
+                        <li><a href="pop-up.html">快閃活動</a></li>
+                        <li><a href="outfitguide.html">穿搭指南</a></li>
+                    </ul>
+                </div>
+                <div class="HMI2">
+                    <p>所有商品</p>
+                    <ul>
+                        <li><a href="tops.html">上衣</a></li>
+                        <li><a href="jackets.html">外套</a></li>
+                        <li><a href="pants.html">褲裝</a></li>
+                        <li><a href="accessories.html">配件</a></li>
+                    </ul>
+                </div>
+                <div class="HMI3">
+                    <p>品牌分類</p>
+                    <ul>
+                        <li><a href="pinsktbs.html">PIN SKTBS</a></li>
+                        <li><a href="bohrhoo.html">BOHRHOO</a></li>
+                        <li><a href="freak.html">FREAK'S STORE</a></li>
+                        <li><a href="nutcia.html">NAUTICA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="box_upper"></div>
+        </section>
+    </header>
+    <!-- ********** 新文件內容置於該線以下 ********** -->
+    <section id="sign">
+        <div class="sign_outer">
+            <!-- ---------- 以下為sign-in區 ---------- -->
+            <div class="sign_inner">
+                <div class="sign_title">
+                    <button class="sign-in_title" onclick="signIn()" onmouseenter="signinblue()"
+                        onmouseleave="signingray()">會員登入</button>
+                    <button class="sign-up_title" onclick="signUp()" onmouseenter="signupblue()"
+                        onmouseleave="signupgray()">註冊會員</button>
+                </div>
+                <div id="sign-in_switch">
+                    <form action="" method="get">
+                        <div class="submit_outer">
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 電子郵件地址：</p>
+                                <input type="email" name="account" id="username" placeholder="請輸入電子郵件地址" autofocus
+                                    required aria-autocomplete="on">
+                            </div>
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 密碼：</p>
+                                <input type="password" name="password" id="password_0" placeholder="請輸入密碼" required>
+                            </div>
+                        </div>
+                        <div class="forget_outer">
+                            <a class="forget_inner" href="#">忘記密碼</a>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" value="登入" onclick="window.location.href = 'memberA.html';">
+                        </div>
+                    </form>
+                    <div class="text_community0"></div>
+                    <div class="text_outer">
+                        <div class="text_community1">使用第三方帳號快速登入 / 註冊</div>
+                        <div class="text_icon_outer">
+                            <ul>
+                                <il class="community_li"><a href="https://zh-tw.facebook.com/" target="_blank"><img src="./images/community/FB_chromatic.svg"
+                                            onmouseover="this.src='./images/community/FB_grayscale.svg';"
+                                            onmouseout="this.src='./images/community/FB_chromatic.svg';" alt=""></a>
+                                </il>
+                                <il class="community_li"><a href="https://www.google.com/intl/zh-TW/account/about/" target="_blank"><img src="./images/community/Google_chromatic.svg"
+                                            onmouseover="this.src='./images/community/Google_grayscale.svg';"
+                                            onmouseout="this.src='./images/community/Google_chromatic.svg';" alt=""></a>
+                                </il>
+                                <il class="community_li"><a href="https://line.me/en/" target="_blank"><img src="./images/community/LINE_chromatic.svg"
+                                            onmouseover="this.src='./images/community/LINE_grayscale.svg';"
+                                            onmouseout="this.src='./images/community/LINE_chromatic.svg';" alt=""></a>
+                                </il>
+                            </ul>
+                        </div>
+                        <div class="text_community3">使用其他帳號表示您已同意我們的《<a class="text_community3-1" href="serviceterms.html">服務條款</a>》
+                        </div>
+                        <div class="text_community4">相關會員權益請詳閱《<a class="text_community4-1" href="privacyterms.html">隱私權政策</a>》</div>
+                    </div>
+                </div>
+                <!-- ---------- 以上為 sign-in 區 ---------- -->
+                <!-- ---------- 以下為 sign-up 區 ---------- -->
+                <div id="sign-up_switch" style="display: none;">
+                    <form action="" method="get">
+                        <div class="submit_outer">
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 電子郵件地址：</p>
+                                <input type="email" name="account" id="username" placeholder="請輸入電子郵件地址" autofocus
+                                    required>
+                            </div>
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 設定密碼：</p>
+                                <input type="password" name="password" id="password_1" placeholder="請設定密碼" required>
+                            </div>
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 確認密碼：</p>
+                                <input type="password" name="password" id="password_2" placeholder="請再次輸入密碼" required>
+                            </div>
+                            <div class="submit_inner">
+                                <p class="sign_height">※ 手機號碼：</p>
+                                <input type="tel" name="tel" id="tel" placeholder="02-12345678" autocomplete="on"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" value="註冊">
+                        </div>
+                    </form>
+                </div>
+                <!-- ---------- 以上為 sign-up 區 ---------- -->
+            </div>
+        </div>
+    </section>
+    <!------------ footer ------------>
+    <footer>
+        <div class="footer_div">
+            <ul class="footer_icon">
+                <li><a href="https://zh-tw.facebook.com/" target="_blank"><img src="./images/community/FB_gray.svg"
+                            onmouseover="this.src='./images/community/FB_blue.svg';"
+                            onmouseout="this.src='./images/community/FB_gray.svg';" alt=""></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/community/IG_gray.svg"
+                            onmouseover="this.src='./images/community/IG_blue.svg';"
+                            onmouseout="this.src='./images/community/IG_gray.svg';" alt=""></a></li>
+                <li><a href="https://line.me/en/" target="_blank"><img src="./images/community/LINE_gray.svg"
+                            onmouseover="this.src='./images/community/LINE_blue.svg';"
+                            onmouseout="this.src='./images/community/LINE_gray.svg';" alt=""></a></li>
+            </ul>
+            <div class="footer_menu_outer">
+                <ul class="footer_menu">
+                    <li class="footer_menu_li">
+                        <a class="footer_menu1" href="faqterms.html">FAQ</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu2" href="privacyterms.html">隱私權政策</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu3" href="serviceterms.html">服務條款</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="contactterms.html">聯絡我們</a>
+                    </li>
+                    <li> | </li>
+                    <li class="footer_menu_li">
+                        <a class="footer_menu4" href="#">訂閱電子報</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Trend Trekker. All Rights Reserved.</p>
+            </div>
+            <div id="gotop">
+                <div class="dotopbtn">
+                    <img src="./images/gototop/gototop_gray.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- jQuery Core 3.7.0 原始碼，一定要放在最上面，先被執行 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- jquery-smoove  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+<!-- 自己的 navbar.js 必須放在後面  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/sign.js"></script>
+
+</html>
