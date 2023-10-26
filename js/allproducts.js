@@ -12,22 +12,21 @@ function applyFilter() {
     console.log(`maxPrice = ${maxPrice}`);
     // 迭代所有 div 元素
     for (var i = 0; i < divs.length; i++) {
-        var sizediv = divs[i];
         var price = parseInt(divs[i].getAttribute("data-price"));
-        var dataS = sizediv.getAttribute('data-s');
-        var dataM = sizediv.getAttribute('data-m');
-        var dataL = sizediv.getAttribute('data-l');
+        var dataS = divs[i].getAttribute('data-s');
+        var dataM = divs[i].getAttribute('data-m');
+        var dataL = divs[i].getAttribute('data-l');
         // 先篩選出限定的尺寸
         if (sizeValue === 'all') {
-            sizediv.classList.remove('hide');
+            divs[i].classList.remove('hide');
         } else if (
             (sizeValue === 's' && dataS === 's') ||
             (sizeValue === 'm' && dataM === 'm') ||
             (sizeValue === 'l' && dataL === 'l')
         ) {
-            sizediv.classList.remove('hide');
+            divs[i].classList.remove('hide');
         } else {
-            sizediv.classList.add('hide');
+            divs[i].classList.add('hide');
         }
         // 再篩選出限定的價格區間
         if ((price < minPrice) || (price > maxPrice)) {
