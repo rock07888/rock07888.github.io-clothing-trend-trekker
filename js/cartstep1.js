@@ -2,9 +2,9 @@
 function decrement1() {
     var input = document.getElementById('quantityInput1');
     var value = parseInt(input.value);
-    if (value = 0) {
+    if (value == 0) {
         input.value = 1;
-    } else if (value = 1) {
+    } else if (value == 1) {
         input.value = 1;
     } else if (value > 1) {
         input.value = value - 1;
@@ -22,9 +22,9 @@ function increment1() {
 function decrement2() {
     var input = document.getElementById('quantityInput2');
     var value = parseInt(input.value);
-    if (value = 0) {
+    if (value == 0) {
         input.value = 1;
-    } else if (value = 1) {
+    } else if (value == 1) {
         input.value = 1;
     } else if (value > 1) {
         input.value = value - 1;
