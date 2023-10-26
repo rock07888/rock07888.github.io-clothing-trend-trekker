@@ -65,14 +65,6 @@ function toggleCheckboxes() {
 }
 
 /* 透過全選勾選欄刪除 */
-function toggleCheckboxes() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    var selectAllCheckbox = document.getElementById('selectAll');
-
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = selectAllCheckbox.checked;
-    }
-}
 
 function hideSelectedElements() {
     var option1Checkbox = document.getElementById('option1');
