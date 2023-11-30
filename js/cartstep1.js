@@ -88,6 +88,19 @@ function hideSelectedElements() {
         elementB.style.display = "flex"
     }
 }
+var selectAllBtn=document.getElementById('selectAll')
+var nsa1=document.getElementById('option1')
+var nsa2=document.getElementById('option2')
+nsa1.addEventListener('click',function(){
+if(!nsa1.checked){
+    selectAllBtn.checked=false
+}
+})
+nsa2.addEventListener('click',function(){
+if(!nsa2.checked){
+    selectAllBtn.checked=false
+}
+})
 
 /* 優惠券合併數量選擇器：第一個商品 */
 function changeParameter1() {
