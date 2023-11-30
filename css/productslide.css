@@ -414,6 +414,13 @@
     }
 }
 
+/* @media(max-width:400px) {
+
+    .product_nautica_btn1,
+    .product_nautica_btn2 {
+        height: 30%;
+    }
+} */
 
 /* 以下商品評論RWD */
 
@@ -483,6 +490,7 @@
     .prodcut-introduce-detail {
         width: 328px;
     }
+
     .review_example {
         margin: 0 10px;
     }
@@ -670,6 +678,11 @@
 }
 
 @media (max-width: 414px) {
+    #product_quantity_input {
+        width: 200px;
+      
+    }
+
     .prodcut-introduce-detail {
         width: 280px;
     }
